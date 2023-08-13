@@ -60,7 +60,7 @@ public class LoginV extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 255));
         jPanel2.setForeground(new java.awt.Color(204, 255, 255));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -100,7 +100,7 @@ public class LoginV extends javax.swing.JFrame {
         jlabelMenu.setMaximumSize(new java.awt.Dimension(120, 120));
         jlabelMenu.setMinimumSize(new java.awt.Dimension(128, 120));
         jlabelMenu.setPreferredSize(jlabelMenu.getMaximumSize());
-        jPanel3.add(jlabelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 0, 410, 490));
+        jPanel3.add(jlabelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 0, 340, 490));
 
         jPanel2.add(jPanel3);
 
