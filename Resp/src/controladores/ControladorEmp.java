@@ -6,7 +6,7 @@ package controladores;
  * @author MSI
  */
 
-public class Controlador {
+public class ControladorEmp {
     
     
 }
