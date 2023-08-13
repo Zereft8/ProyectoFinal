@@ -7,10 +7,8 @@ package modelos;
  * 
  */
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
+import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -21,6 +19,7 @@ public class EmpleadosDAO {
     Connection        con;
     PreparedStatement ps;
     ResultSet         rs;
+    
     
     
     /*Con este solo se listara un registro de la base de datos*/

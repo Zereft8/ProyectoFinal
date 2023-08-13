@@ -13,19 +13,19 @@ import java.sql.DriverManager;
 
 public class ConexionMySQL {
     
-    Connection cn;
+    Connection con;
     
    public Connection conectar(){
        
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "");
             System.out.println("Estamos conectados con exito.");
             
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println("Error en la conexion :" + ex);
         }
-        return cn;
+        return con;
     }
 }   
 

@@ -17,6 +17,10 @@ public class EmpleadosDTO {
     String cargo;
     int supervisor;
     
+    public EmpleadosDTO(){
+    
+    }
+    
     public EmpleadosDTO(int id,  String nombre, String apellidos, String cedula,  float sueldo, String telefono, String cargo, int supervisor ){
     
         this.id = id;
@@ -30,9 +34,6 @@ public class EmpleadosDTO {
         
     }
 
-    EmpleadosDTO() {
-    
-    }
 
     public int getId() {
         return id;

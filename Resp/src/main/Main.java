@@ -1,5 +1,8 @@
 package main;
 
+import Vistas.Menu;
+import controladores.ControladorEmp;
+
 
 /**
  *
@@ -10,7 +13,10 @@ public class Main {
     
     public static void main(String[] args) {
         
-        System.out.println("Elian Estuvo Aqui");
+        Menu menu = new Menu();
+        ControladorEmp cemp = new ControladorEmp(menu);
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         
         
     }
