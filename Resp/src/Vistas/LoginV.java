@@ -5,6 +5,11 @@ import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.plaf.basic.BasicButtonUI;
 
 
 /**
@@ -22,6 +27,41 @@ public class LoginV extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         
         ajusteImg(jlabelMenu,"src/Imagenes/menu.png");
+        
+        JButton [] btns = {jButton1};
+        for (JButton btn : btns) {
+            btn.setBackground(new Color(0,204,255));
+            btn.setUI(new BasicButtonUI());
+            btn.addMouseListener(new MouseListener(){
+                
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    btn.setBackground(new Color(51,153,255));
+              }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    
+              }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+                    
+                    
+              }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    btn.setBackground(new Color(51,102,255));
+             }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    btn.setBackground(new Color(0,204,255));
+              }  
+                
+            });
+        }
 
     }
     
@@ -53,7 +93,6 @@ public class LoginV extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jlabelMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -92,9 +131,6 @@ public class LoginV extends javax.swing.JFrame {
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
         jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 350, 40));
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 450, 20, -1));
-
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 450, 380));
 
         jlabelMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menu.png"))); // NOI18N
         jlabelMenu.setMaximumSize(new java.awt.Dimension(120, 120));
@@ -167,7 +203,6 @@ public class LoginV extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
