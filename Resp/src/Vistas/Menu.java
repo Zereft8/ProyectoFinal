@@ -273,7 +273,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnEmpLayout.setVerticalGroup(
             pnEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,9 +401,9 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnLimpiar;
-    private javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnLimpiar;
+    public javax.swing.JButton btnNuevo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -413,7 +413,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtEmp;
+    public javax.swing.JTable jtEmp;
     private javax.swing.JPanel plMenu;
     private javax.swing.JPanel plNavegacion;
     private javax.swing.JPanel pnBody;
@@ -422,13 +422,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel pnPedidos;
     private javax.swing.JPanel pnPrincipal;
     private javax.swing.JPanel pnUsuarios;
-    private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCargo;
-    private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtSueldo;
-    private javax.swing.JTextField txtSupervisor;
-    private javax.swing.JTextField txtTelefono;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JTextField txtCargo;
+    public javax.swing.JTextField txtCedula;
+    public javax.swing.JTextField txtID;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtSueldo;
+    public javax.swing.JTextField txtSupervisor;
+    public javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
