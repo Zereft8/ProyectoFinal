@@ -18,6 +18,7 @@ import modelos.ProductosDTO;
  * @author Elianny
  */
 public class ControladorProd implements ActionListener{
+    
     /**
      * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
      * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
@@ -25,7 +26,7 @@ public class ControladorProd implements ActionListener{
      */
     
     ProductosDAO proddao = new ProductosDAO();
-   ProductosDTO proddto = new ProductosDTO();
+    ProductosDTO proddto = new ProductosDTO();
     Menu vistaMenu = new Menu();
     DefaultTableModel modelo = new DefaultTableModel();
     
@@ -58,7 +59,7 @@ public class ControladorProd implements ActionListener{
         this.vistaMenu.btnProducto_Eliminar.setEnabled(true);
         this.vistaMenu.btnProductos_Buscar.setEnabled(true);
         
-                vistaMenu.txtIProducto_ID.enable(false);
+        vistaMenu.txtIProducto_ID.enable(false);
 
         
      
@@ -66,6 +67,7 @@ public class ControladorProd implements ActionListener{
         //Limpiar formulario y Listar contactos
         
         limpiarCampos(m);
+        
         leer(vistaMenu.jtProductos);
     }
     

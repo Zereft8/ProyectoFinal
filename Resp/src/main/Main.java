@@ -6,6 +6,7 @@ import controladores.ControladorEmp;
 import controladores.ControladorProd;
 import controladores.ControladorClient;
 import controladores.ControladorLogin;
+import controladores.ControladorPed;
 import controladores.ControladorUsuario;
 import modelos.EmpleadosDAO;
 import modelos.EmpleadosDTO;
@@ -15,6 +16,8 @@ import modelos.ClientesDAO;
 import modelos.ClientesDTO;
 import modelos.UsuarioDAO;
 import modelos.UsuarioDTO;
+import modelos.PedidosDAO;
+import modelos.PedidosDTO;
 
 
 
@@ -29,7 +32,8 @@ public class Main {
     public static void main(String[] args) {
         
         
-        
+        PedidosDAO pdao = new PedidosDAO();
+        PedidosDTO pdto = new PedidosDTO();
         UsuarioDAO usdao = new UsuarioDAO();
         UsuarioDTO usdto = new UsuarioDTO();
         EmpleadosDAO empdao = new EmpleadosDAO();
@@ -40,10 +44,12 @@ public class Main {
         ClientesDTO clientdto = new ClientesDTO();
         
         Menu menu = new Menu();
+        
         ControladorUsuario us = new ControladorUsuario(menu);
         ControladorEmp cemp = new ControladorEmp(menu);
         ControladorProd cprod =new ControladorProd (menu);
         ControladorClient cclient =new ControladorClient (menu);
+        ControladorPed cp =new ControladorPed (menu);
         
         LoginV lv = new LoginV();
         lv.setVisible(true);

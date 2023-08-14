@@ -19,7 +19,7 @@ public class ConexionMySQL {
        
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "1308");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "");
             System.out.println("Estamos conectados con exito.");
             
         }catch(ClassNotFoundException | SQLException ex){
