@@ -1,9 +1,11 @@
 package main;
 
 import Vistas.Menu;
+import Vistas.LoginV;
 import controladores.ControladorEmp;
 import controladores.ControladorProd;
 import controladores.ControladorClient;
+import controladores.ControladorLogin;
 import controladores.ControladorUsuario;
 import modelos.EmpleadosDAO;
 import modelos.EmpleadosDTO;
@@ -16,6 +18,7 @@ import modelos.UsuarioDTO;
 
 
 
+
 /**
  *
  * @author MSI
@@ -24,6 +27,8 @@ import modelos.UsuarioDTO;
 public class Main {
     
     public static void main(String[] args) {
+        
+        
         
         UsuarioDAO usdao = new UsuarioDAO();
         UsuarioDTO usdto = new UsuarioDTO();
@@ -39,8 +44,11 @@ public class Main {
         ControladorEmp cemp = new ControladorEmp(menu);
         ControladorProd cprod =new ControladorProd (menu);
         ControladorClient cclient =new ControladorClient (menu);
-        menu.setVisible(true);
-        menu.setLocationRelativeTo(null);
+        
+        LoginV lv = new LoginV();
+        lv.setVisible(true);
+        lv.setLocationRelativeTo(null);
+        ControladorLogin cl = new ControladorLogin(lv);
         
         
     }
