@@ -79,11 +79,11 @@ public class Menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         pnBody = new javax.swing.JPanel();
         pnPrincipal = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -154,13 +154,6 @@ public class Menu extends javax.swing.JFrame {
         });
         plMenu.add(jButton2);
 
-        jButton3.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Usuarios");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jButton3.setPreferredSize(new java.awt.Dimension(150, 70));
-        plMenu.add(jButton3);
-
         jButton4.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Clientes");
@@ -188,6 +181,13 @@ public class Menu extends javax.swing.JFrame {
         jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jButton7.setPreferredSize(new java.awt.Dimension(150, 70));
         plMenu.add(jButton7);
+
+        jButton3.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Usuarios");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton3.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton3);
 
         plNavegacion.add(plMenu, java.awt.BorderLayout.WEST);
 
@@ -257,21 +257,18 @@ public class Menu extends javax.swing.JFrame {
 
         btnNuevo.setBackground(new java.awt.Color(153, 255, 255));
         btnNuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnNuevo.setForeground(new java.awt.Color(0, 0, 0));
         btnNuevo.setText("Nuevo");
         btnNuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnNuevo.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnCancelar.setBackground(new java.awt.Color(153, 255, 255));
         btnCancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(0, 0, 0));
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnCancelar.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnBuscar.setBackground(new java.awt.Color(153, 255, 255));
         btnBuscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(0, 0, 0));
         btnBuscar.setText("Buscar");
         btnBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         btnBuscar.setPreferredSize(new java.awt.Dimension(150, 70));
@@ -301,7 +298,6 @@ public class Menu extends javax.swing.JFrame {
 
         btnEliminar.setBackground(new java.awt.Color(153, 255, 255));
         btnEliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnEliminar.setPreferredSize(new java.awt.Dimension(150, 70));
@@ -312,14 +308,12 @@ public class Menu extends javax.swing.JFrame {
 
         btnActualizar.setBackground(new java.awt.Color(153, 255, 255));
         btnActualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("Actualizar");
         btnActualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnActualizar.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnEditar.setBackground(new java.awt.Color(153, 255, 255));
         btnEditar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnEditar.setPreferredSize(new java.awt.Dimension(150, 70));
@@ -443,6 +437,11 @@ public class Menu extends javax.swing.JFrame {
         txtIProducto_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtIProducto_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         txtIProducto_ID.setPreferredSize(new java.awt.Dimension(87, 26));
+        txtIProducto_ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIProducto_IDActionPerformed(evt);
+            }
+        });
 
         txtProducto_Precio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtProducto_Precio.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Precio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
@@ -454,35 +453,30 @@ public class Menu extends javax.swing.JFrame {
 
         btnProducto_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
         btnProducto_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnProducto_Nuevo.setForeground(new java.awt.Color(0, 0, 0));
         btnProducto_Nuevo.setText("Nuevo");
         btnProducto_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnProducto_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnProducto_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
         btnProducto_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnProducto_Actualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnProducto_Actualizar.setText("Actualizar");
         btnProducto_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnProducto_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnProducto_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
         btnProducto_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnProducto_Cancelar.setForeground(new java.awt.Color(0, 0, 0));
         btnProducto_Cancelar.setText("Cancelar");
         btnProducto_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnProducto_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnProducto_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
         btnProducto_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnProducto_Eliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnProducto_Eliminar.setText("Eliminar");
         btnProducto_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnProducto_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
 
         btnProducto_Editar.setBackground(new java.awt.Color(153, 255, 255));
         btnProducto_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnProducto_Editar.setForeground(new java.awt.Color(0, 0, 0));
         btnProducto_Editar.setText("Editar");
         btnProducto_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         btnProducto_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
@@ -511,7 +505,6 @@ public class Menu extends javax.swing.JFrame {
 
         btnProductos_Buscar.setBackground(new java.awt.Color(153, 255, 255));
         btnProductos_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnProductos_Buscar.setForeground(new java.awt.Color(0, 0, 0));
         btnProductos_Buscar.setText("Buscar");
         btnProductos_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         btnProductos_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
@@ -547,7 +540,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(txtProductos_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnProductos_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(487, Short.MAX_VALUE))
         );
         pnProductosLayout.setVerticalGroup(
             pnProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -600,6 +593,10 @@ public class Menu extends javax.swing.JFrame {
     private void btnProductos_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductos_BuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnProductos_BuscarActionPerformed
+
+    private void txtIProducto_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIProducto_IDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIProducto_IDActionPerformed
 
     /**
      * @param args the command line arguments
