@@ -45,16 +45,19 @@ public class ControladorEmp implements ActionListener {
         this.vistaMenu.btnNuevo.addActionListener(this);
         this.vistaMenu.btnActualizar.addActionListener(this);
         this.vistaMenu.btnEliminar.addActionListener(this);
-        this.vistaMenu.btnLimpiar.addActionListener(this);
+        this.vistaMenu.btnCancelar.addActionListener(this);
         this.vistaMenu.btnBuscar.addActionListener(this);
+        this.vistaMenu.btnEditar.addActionListener(this);
         this.vistaMenu.txtBuscar.addActionListener(this);
 
         this.vistaMenu.btnNuevo.setEnabled(true);
         this.vistaMenu.btnActualizar.setEnabled(false);
         this.vistaMenu.btnBuscar.setEnabled(true);
-        this.vistaMenu.btnLimpiar.setEnabled(true);
-        this.vistaMenu.btnEliminar.setEnabled(false);
+        this.vistaMenu.btnCancelar.setEnabled(true);
+        this.vistaMenu.btnEliminar.setEnabled(true);
         this.vistaMenu.btnBuscar.setEnabled(true);
+        
+     
 
         //Limpiar formulario y Listar contactos
         
@@ -65,7 +68,7 @@ public class ControladorEmp implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * contactos.
+     * Empleados.
      *
      * @param tabla
      */
@@ -157,7 +160,7 @@ public class ControladorEmp implements ActionListener {
         float Sueldo = Float.parseFloat(vistaMenu.txtSueldo.getText());
         String Telefono = vistaMenu.txtTelefono.getText();
         String Cargo = vistaMenu.txtCargo.getText();
-        int Supervisor = Integer.parseInt(vistaMenu.txtSueldo.getText());
+        int Supervisor = Integer.parseInt(vistaMenu.txtSupervisor.getText());
     
 
         empdto.setNombre(Nombre);
@@ -170,6 +173,7 @@ public class ControladorEmp implements ActionListener {
                 
 
         if (validarCampos(vistaMenu) > 0) {
+            
             r = empdao.agregar(empdto);
             if (r == 1) {
                 JOptionPane.showMessageDialog(vistaMenu, "Empleado registrado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
@@ -212,8 +216,14 @@ public class ControladorEmp implements ActionListener {
                 float Sueldo = Float.parseFloat(vistaMenu.txtSueldo.getText());
                 String Telefono = vistaMenu.txtTelefono.getText();
                 String Cargo = vistaMenu.txtCargo.getText();
-                int Supervisor = Integer.parseInt(vistaMenu.txtSueldo.getText());
+                int Supervisor = Integer.parseInt(vistaMenu.txtSupervisor.getText());
                 
+                Object obj = vistaMenu.jtEmp.getValueAt(fila, 7);
+
+                
+                if (obj != null) {
+                    
+                    
                     empdto.setId(id);
                     empdto.setNombre(Nombre);
                     empdto.setApellidos(Apellidos);
@@ -222,15 +232,30 @@ public class ControladorEmp implements ActionListener {
                     empdto.setTelefono(Telefono);
                     empdto.setCargo(Cargo);
                     empdto.setSupervisor(Supervisor);
+                    
+                }else{
+                
+                    empdto.setId(id);
+                    empdto.setNombre(Nombre);
+                    empdto.setApellidos(Apellidos);
+                    empdto.setCedula(Cedula);
+                    empdto.setSueldo(Sueldo);
+                    empdto.setTelefono(Telefono);
+                    empdto.setCargo(Cargo);
+                    empdto.setSupervisor(0);
+                
+                }
+                
+
 
                 r = empdao.actualizar(empdto);
                 if (r == 1) {
-                    JOptionPane.showMessageDialog(vistaMenu, "Contacto actualizado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(vistaMenu, "Empleado actualizado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
                     limpiarTabla();
                     leer(vistaMenu.jtEmp);
                     limpiarCampos(vistaMenu);
                 } else {
-                    JOptionPane.showMessageDialog(vistaMenu, "Error: tratando de actualizar contacto.", "Error!", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(vistaMenu, "Error: tratando de actualizar Empleado.", "Error!", JOptionPane.ERROR_MESSAGE);
                     limpiarTabla();
                     leer(vistaMenu.jtEmp);
                     limpiarCampos(vistaMenu);
@@ -266,8 +291,48 @@ public class ControladorEmp implements ActionListener {
         }
     }
     
+     /**
+     * Este metodo pone en modo edicion el formulario y carga los datos del
+     * contacto a ser modificado.
+     */
     
-    
+        public void editar() {
+            
+        vistaMenu.txtID.enable(false);
+        
+        int fila = vistaMenu.jtEmp.getSelectedRow();
+
+        if (fila == -1) {
+            
+            JOptionPane.showMessageDialog(vistaMenu, "Debe seleccionar una fila para la edicion.", "Error!", JOptionPane.ERROR_MESSAGE);
+            limpiarTabla();
+            leer(vistaMenu.jtEmp);
+            limpiarCampos(vistaMenu);
+            
+        }else {
+            
+            int id = Integer.parseInt((String) vistaMenu.jtEmp.getValueAt(fila, 0).toString());
+            String Nombre = (String) vistaMenu.jtEmp.getValueAt(fila, 1);
+            String Apellidos = (String) vistaMenu.jtEmp.getValueAt(fila, 2);
+            String Cedula = (String) vistaMenu.jtEmp.getValueAt(fila, 3);
+            float Sueldo = Float.parseFloat((String) vistaMenu.jtEmp.getValueAt(fila, 4).toString());
+            String Telefono = (String) vistaMenu.jtEmp.getValueAt(fila, 5);
+            String Cargo = (String) vistaMenu.jtEmp.getValueAt(fila, 6);
+            int Supervisor = Integer.parseInt((String) vistaMenu.jtEmp.getValueAt(fila, 7).toString());
+
+            vistaMenu.txtID.setText("" + id);
+            vistaMenu.txtNombre.setText(Nombre);
+            vistaMenu.txtApellidos.setText(Apellidos);
+            vistaMenu.txtCedula.setText(Cedula);
+            vistaMenu.txtSueldo.setText("" + Sueldo);
+            vistaMenu.txtTelefono.setText(Telefono);
+            vistaMenu.txtCargo.setText(Cargo);
+            vistaMenu.txtSupervisor.setText("" + Supervisor);
+
+            vistaMenu.txtNombre.requestFocus();
+        }
+    }
+
     
     
     /**
@@ -359,17 +424,26 @@ public class ControladorEmp implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        
   
         if (e.getSource() == vistaMenu.btnNuevo) {
             nuevo();
-            this.vistaMenu.btnActualizar.setEnabled(false);
-            this.vistaMenu.btnEliminar.setEnabled(false);
+            leer(vistaMenu.jtEmp);
 
-        }
-        if (e.getSource() == vistaMenu.btnActualizar) {
+        }if (e.getSource() == vistaMenu.btnEditar) {
+            editar();
+            this.vistaMenu.btnEditar.setEnabled(true);
+            this.vistaMenu.btnActualizar.setEnabled(true);
+            this.vistaMenu.btnNuevo.setEnabled(false);
+            this.vistaMenu.btnEliminar.setEnabled(true);
+            
+         }
+        if (e.getSource() == vistaMenu.btnActualizar) { // GUARDAR
             actualizar();
             this.vistaMenu.btnActualizar.setEnabled(false);
             this.vistaMenu.btnNuevo.setEnabled(true);
+            this.vistaMenu.btnEliminar.setEnabled(false);
+            this.vistaMenu.btnEditar.setEnabled(true);
             limpiarTabla();
             leer(vistaMenu.jtEmp);
             vistaMenu.txtNombre.requestFocus();
@@ -383,10 +457,11 @@ public class ControladorEmp implements ActionListener {
             limpiarTabla();
             leer(vistaMenu.jtEmp);
         }
-        if (e.getSource() == vistaMenu.btnLimpiar) {
+        if (e.getSource() == vistaMenu.btnCancelar) {
             this.vistaMenu.btnNuevo.setEnabled(true);
+            this.vistaMenu.btnEditar.setEnabled(true);            
             this.vistaMenu.btnActualizar.setEnabled(false);
-            this.vistaMenu.btnEliminar.setEnabled(false);
+            this.vistaMenu.btnEliminar.setEnabled(true);
             vistaMenu.txtBuscar.setText("");
             limpiarCampos(vistaMenu);
             limpiarTabla();
@@ -395,20 +470,21 @@ public class ControladorEmp implements ActionListener {
         if (e.getSource() == vistaMenu.btnBuscar) {
             
             if (!this.vistaMenu.txtBuscar.getText().equals("")) {
-                this.vistaMenu.btnNuevo.setEnabled(true);
-                this.vistaMenu.btnActualizar.setEnabled(false);
-                this.vistaMenu.btnLimpiar.setEnabled(true);
+                this.vistaMenu.btnNuevo.setEnabled(false);
+                this.vistaMenu.btnActualizar.setEnabled(true);
+                this.vistaMenu.btnCancelar.setEnabled(true);
                 this.vistaMenu.btnEliminar.setEnabled(true);
                 limpiarCampos(vistaMenu);
                 limpiarTabla();
                 leerEmpleados(vistaMenu.jtEmp);
             } else {
-                this.vistaMenu.btnLimpiar.setEnabled(true);
+                this.vistaMenu.btnCancelar.setEnabled(true);
                 JOptionPane.showMessageDialog(vistaMenu, "El campo de busqueda esta vacio.");
             }
         }
-    }
-
+    
+}
+    
 }
 
 

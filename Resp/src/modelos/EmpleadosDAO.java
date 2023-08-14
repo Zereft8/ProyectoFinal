@@ -25,13 +25,9 @@ public class EmpleadosDAO {
     /*Con este solo se listara un registro de la base de datos*/
     
      public List listarRegistro(String valorBuscar){
-        
-        String sql = "SELECT * FROM empleados "+
-                     "WHERE ID_Empleados LIKE '%"+valorBuscar+"%' OR "+
-                     "Nombres LIKE '%"+valorBuscar+"%' OR "+
-                     "Apellidos LIKE '%"+valorBuscar+"%' OR "+
-                     "Telefonos LIKE '%"+valorBuscar+"%' OR "+
-                     "Correo LIKE '%"+valorBuscar+"%'";
+         
+
+        String sql = "SELECT * FROM empleados WHERE ID_Empleados LIKE '%"+valorBuscar+"%'";
         
         List<EmpleadosDTO>datos = new ArrayList<>();
         try{
@@ -66,7 +62,7 @@ public class EmpleadosDAO {
      
         public List listar(){
             
-        String sql = "select * from empleados";
+        String sql = "SELECT * FROM empleados";
         
         List<EmpleadosDTO>datos = new ArrayList<>();
         try{
@@ -103,7 +99,7 @@ public class EmpleadosDAO {
     
         public int agregar(EmpleadosDTO emp){
         
-        String sql = "INSERT INTO Empleados (Nombre, Apellidos, Cedula, Sueldo, Télefono, Cargo, ID_Empleados_Supervisor) VALUES (?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO empleados (Nombre, Apellidos, Cedula, Sueldo, Télefono, Cargo, ID_Empleados_Supervisor) VALUES (?,?,?,?,?,?,?)";
         
         try {
             
@@ -115,7 +111,7 @@ public class EmpleadosDAO {
             ps.setString(3, emp.getCedula());
             ps.setFloat(4, emp.getSueldo());
             ps.setString(5, emp.getTelefono());
-            ps.setString(6, emp.getCargo());
+            ps.setString(6, emp.getCargo());          
             ps.setInt(7, emp.getSupervisor());
             
             ps.executeUpdate();
@@ -129,13 +125,13 @@ public class EmpleadosDAO {
         return 1;
     }
         
-        // Este metodo se encargara de insertar nuevos datos
+        // Este metodo se encargara de actualizar nuevos datos
         
         public int actualizar(EmpleadosDTO emp){
         
         int r = 0;
         
-        String sql = "UPDATE empleados SET Nombre = ?, Apellidos = ?, Cedula = ?, Sueldo = ?, Télefono = ?, Cargo = ?, ID_Empleados_Supervisor = ? WHERE ID_Empleados = ?";
+        String sql = "UPDATE empleados SET Nombre=?, Apellidos=?, Cedula=?, Sueldo=?, Télefono=?, Cargo=?, ID_Empleados_Supervisor=? WHERE ID_Empleados=?";
         
         try {
             
@@ -147,8 +143,9 @@ public class EmpleadosDAO {
             ps.setString(3, emp.getCedula());
             ps.setFloat(4, emp.getSueldo());
             ps.setString(5, emp.getTelefono());
-            ps.setString(6, emp.getCargo());
+            ps.setString(6, emp.getCargo());          
             ps.setInt(7, emp.getSupervisor());
+            ps.setInt(8, emp.getId());
             
             r = ps.executeUpdate();
             
