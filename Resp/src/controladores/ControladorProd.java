@@ -42,6 +42,7 @@ public class ControladorProd implements ActionListener{
         
         this.vistaMenu = m;
         
+        
         this.vistaMenu.btnProducto_Nuevo.addActionListener(this);
         this.vistaMenu.btnProducto_Actualizar.addActionListener(this);
         this.vistaMenu.btnProducto_Eliminar.addActionListener(this);
