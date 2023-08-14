@@ -154,7 +154,6 @@ public class ControladorProd implements ActionListener{
         float Precio = Float.parseFloat(vistaMenu.txtProducto_Precio.getText());
         
     
-//TENGO QUE ACTUALIZAR EL NOMBRE DE PRECIO TXT
         proddto.setNombre(Nombre);
         proddto.setPrecio(Precio);
         
