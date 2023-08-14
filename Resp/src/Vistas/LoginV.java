@@ -28,7 +28,7 @@ public class LoginV extends javax.swing.JFrame {
         
         ajusteImg(jlabelMenu,"src/Imagenes/menu.png");
         
-        JButton [] btns = {jButton1};
+        JButton [] btns = {btnIniciar_Sesion};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0,204,255));
             btn.setUI(new BasicButtonUI());
@@ -88,12 +88,13 @@ public class LoginV extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtLogin_Usuario = new javax.swing.JTextField();
+        btnIniciar_Sesion = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtLogin_Contraseña = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jlabelMenu = new javax.swing.JLabel();
+        btnLogin_Cancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,28 +109,32 @@ public class LoginV extends javax.swing.JFrame {
         jLabel6.setText("Usuario");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtLogin_Usuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtLogin_Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtLogin_UsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 350, 40));
+        jPanel3.add(txtLogin_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 340, 40));
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 255));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Iniciar sesión");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIniciar_Sesion.setBackground(new java.awt.Color(0, 204, 255));
+        btnIniciar_Sesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnIniciar_Sesion.setForeground(new java.awt.Color(0, 0, 0));
+        btnIniciar_Sesion.setText("Iniciar sesión");
+        btnIniciar_Sesion.setBorder(null);
+        btnIniciar_Sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIniciar_SesionActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 350, 50));
+        jPanel3.add(btnIniciar_Sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 160, 50));
 
         jLabel7.setForeground(new java.awt.Color(73, 80, 87));
         jLabel7.setText("Contraseña");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 350, 40));
+
+        txtLogin_Contraseña.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(txtLogin_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 340, 40));
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 450, 20, -1));
 
         jlabelMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menu.png"))); // NOI18N
@@ -137,6 +142,18 @@ public class LoginV extends javax.swing.JFrame {
         jlabelMenu.setMinimumSize(new java.awt.Dimension(128, 120));
         jlabelMenu.setPreferredSize(jlabelMenu.getMaximumSize());
         jPanel3.add(jlabelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 0, 340, 490));
+
+        btnLogin_Cancelar.setBackground(new java.awt.Color(255, 51, 51));
+        btnLogin_Cancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLogin_Cancelar.setForeground(new java.awt.Color(0, 0, 0));
+        btnLogin_Cancelar.setText("Cancelar");
+        btnLogin_Cancelar.setBorder(null);
+        btnLogin_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogin_CancelarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnLogin_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 160, 50));
 
         jPanel2.add(jPanel3);
 
@@ -154,13 +171,17 @@ public class LoginV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtLogin_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogin_UsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtLogin_UsuarioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnIniciar_SesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar_SesionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnIniciar_SesionActionPerformed
+
+    private void btnLogin_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin_CancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLogin_CancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,14 +223,15 @@ public class LoginV extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnIniciar_Sesion;
+    public javax.swing.JButton btnLogin_Cancelar;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jlabelMenu;
+    public javax.swing.JTextField txtLogin_Contraseña;
+    public javax.swing.JTextField txtLogin_Usuario;
     // End of variables declaration//GEN-END:variables
 }
