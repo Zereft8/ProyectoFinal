@@ -55,7 +55,7 @@ public class ControladorClient  implements ActionListener {
         this.vistaMenu.btnCliente_Eliminar.setEnabled(true);
         this.vistaMenu.txtCliente_Buscar.setEnabled(true);
         
-        vistaMenu.txtIProducto_ID.enable(false);
+        vistaMenu.txtCliente_ID.enable(false);
      
 
         //Limpiar formulario y Listar contactos
@@ -164,12 +164,16 @@ public class ControladorClient  implements ActionListener {
         if (validarCampos(vistaMenu) > 0) {
             
             r = clientdao.agregar(clientdto);
+            
             if (r == 1) {
+                
                 JOptionPane.showMessageDialog(vistaMenu, "Cliente registrado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
                 limpiarTabla();
                 leer(vistaMenu.jtClientes);
                 limpiarCampos(vistaMenu);
+                
             } else {
+                
                 JOptionPane.showMessageDialog(vistaMenu, "Error: tratando de registrar Cliente.", "Error!", JOptionPane.ERROR_MESSAGE);
                 limpiarTabla();
                 leer(vistaMenu.jtClientes);
@@ -205,29 +209,13 @@ public class ControladorClient  implements ActionListener {
                 String Telefono = vistaMenu.txtCliente_Telefono.getText();
                 
                 
-                Object obj = vistaMenu.jtClientes.getValueAt(fila, 5);
-
-                
-                if (obj != null) {
-                    
-                    
                     clientdto.setId(id);
                     clientdto.setNombre(Nombre);
                     clientdto.setApellidos(Apellidos);
                     clientdto.setCedula(Cedula);
                     clientdto.setTelefono(Telefono);
+
                     
-                }else{
-                
-                    clientdto.setId(id);
-                    clientdto.setNombre(Nombre);
-                    clientdto.setApellidos(Apellidos);
-                    clientdto.setCedula(Cedula);
-                    clientdto.setTelefono(Telefono);
-                }
-                
-
-
                 r = clientdao.actualizar(clientdto);
                 if (r == 1) {
                     JOptionPane.showMessageDialog(vistaMenu, "Cliente actualizado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
@@ -352,7 +340,7 @@ public class ControladorClient  implements ActionListener {
        
 
     }
-        return 0;
+        return validacion;
     
     }
         /**
@@ -362,11 +350,11 @@ public class ControladorClient  implements ActionListener {
         */
        public final void limpiarCampos(Menu m) {
 
-           m.txtID.setText("");
-           m.txtNombre.setText("");
-           m.txtApellidos.setText("");
-           m.txtCedula.setText("");
-           m.txtTelefono.setText("");
+           m.txtCliente_ID.setText("");
+           m.txtCliente_Nombre.setText("");
+           m.txtCliente_Apellidos.setText("");
+           m.txtCliente_Cedula.setText("");
+           m.txtCliente_Telefono.setText("");
 
 
        }
@@ -383,10 +371,12 @@ public class ControladorClient  implements ActionListener {
   
         if (e.getSource() == vistaMenu.btnCliente_Nuevo) {
             nuevo();
+            
             leer(vistaMenu.jtClientes);
 
         }if (e.getSource() == vistaMenu.btnCliente_Editar) {
             editar();
+            
             this.vistaMenu.btnCliente_Editar.setEnabled(true);
             this.vistaMenu.btnCliente_Actualizar.setEnabled(true);
             this.vistaMenu.btnCliente_Nuevo.setEnabled(false);
@@ -395,6 +385,7 @@ public class ControladorClient  implements ActionListener {
          }
         if (e.getSource() == vistaMenu.btnCliente_Actualizar) { // GUARDAR
             actualizar();
+            
             this.vistaMenu.btnCliente_Actualizar.setEnabled(false);
             this.vistaMenu.btnCliente_Nuevo.setEnabled(true);
             this.vistaMenu.btnCliente_Eliminar.setEnabled(false);
@@ -405,6 +396,7 @@ public class ControladorClient  implements ActionListener {
         }
         if (e.getSource() == vistaMenu.btnCliente_Eliminar) {
             eliminar();
+            
             this.vistaMenu.btnCliente_Nuevo.setEnabled(true);
             this.vistaMenu.btnCliente_Actualizar.setEnabled(false);
             this.vistaMenu.btnCliente_Eliminar.setEnabled(false);
@@ -413,6 +405,7 @@ public class ControladorClient  implements ActionListener {
             leer(vistaMenu.jtClientes);
         }
         if (e.getSource() == vistaMenu.btnCliente_Cancelar) {
+            
             this.vistaMenu.btnCliente_Nuevo.setEnabled(true);
             this.vistaMenu.btnCliente_Editar.setEnabled(true);            
             this.vistaMenu.btnCliente_Actualizar.setEnabled(false);

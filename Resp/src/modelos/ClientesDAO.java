@@ -18,6 +18,7 @@ public class ClientesDAO {
     ResultSet rs;
 
     /*Con este solo se listara un registro de la base de datos*/
+    
     public List listarRegistro(String valorBuscar) {
 
         String sql = "SELECT * FROM clientes WHERE ID_Clientes LIKE '%" + valorBuscar + "%'";
@@ -50,6 +51,7 @@ public class ClientesDAO {
     }
 
     /*Con este metodo se listaran los registros de la base de datos*/
+    
     public List listar() {
 
         String sql = "SELECT * FROM clientes";
@@ -65,7 +67,7 @@ public class ClientesDAO {
 
                 ClientesDTO cli = new ClientesDTO();
 
-                 cli.setId(rs.getInt(1));
+                cli.setId(rs.getInt(1));
                 cli.setNombre(rs.getString(2));
                 cli.setApellidos(rs.getString(3));
                 cli.setCedula(rs.getString(4));
@@ -83,9 +85,10 @@ public class ClientesDAO {
     }
 
     //Este metodo se encargara de insertar datos
+    
     public int agregar(ClientesDTO emp) {
 
-        String sql = "INSERT INTO clientes (Nombre, Apellidos, Cedula, Télefono) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO clientes (Nombre, Apellidos, Cedula, Teléfono) VALUES (?,?,?,?)";
 
         try {
 
@@ -95,7 +98,7 @@ public class ClientesDAO {
             ps.setString(1, emp.getNombre());
             ps.setString(2, emp.getApellidos());
             ps.setString(3, emp.getCedula());
-            ps.setString(5, emp.getTelefono());
+            ps.setString(4, emp.getTelefono());
             
             ps.executeUpdate();
 
@@ -113,7 +116,7 @@ public class ClientesDAO {
 
         int r = 0;
 
-        String sql = "UPDATE clientes SET Nombre=?, Apellidos=?, Cedula=?, Télefono=? WHERE ID_Clientes=?";
+        String sql = "UPDATE clientes SET Nombre=?, Apellidos=?, Cedula=?, Teléfono=? WHERE ID_Clientes=?";
 
         try {
 
