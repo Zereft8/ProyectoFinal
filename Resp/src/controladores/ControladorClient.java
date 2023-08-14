@@ -367,7 +367,8 @@ public class ControladorClient  implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        
+  
         if (e.getSource() == vistaMenu.btnCliente_Nuevo) {
             nuevo();
             

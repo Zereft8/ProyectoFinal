@@ -1,8 +1,6 @@
 
 package Vistas;
 
-
-
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -24,7 +22,7 @@ public class Menu extends javax.swing.JFrame {
         
         this.setLocationRelativeTo(this);
         
-        JButton [] btns = {btnMenu_Productos,btnMenu_Empleados,btnMenu_Usuarios,btnMenu_Clientes,btnMenu_Pedidos,btnMenu_Principal};
+        JButton [] btns = {jButton6,jButton2,jButton3,jButton4,jButton5,jButton1,jButton7};
         for (JButton btn : btns) {
             btn.setBackground(new Color(86,86,86));
             btn.setUI(new BasicButtonUI());
@@ -62,10 +60,8 @@ public class Menu extends javax.swing.JFrame {
                 
             });
             
-            
 
         }
-       
         
     }
 
@@ -81,34 +77,15 @@ public class Menu extends javax.swing.JFrame {
         plNavegacion = new javax.swing.JPanel();
         plMenu = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        btnMenu_Principal = new javax.swing.JButton();
-        btnMenu_Empleados = new javax.swing.JButton();
-        btnMenu_Usuarios = new javax.swing.JButton();
-        btnMenu_Clientes = new javax.swing.JButton();
-        btnMenu_Pedidos = new javax.swing.JButton();
-        btnMenu_Productos = new javax.swing.JButton();
-        btnMenu_Salir = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         pnBody = new javax.swing.JPanel();
-        JTpaneles = new javax.swing.JTabbedPane();
         pnPrincipal = new javax.swing.JPanel();
-        pnEmp = new javax.swing.JPanel();
-        txtID = new javax.swing.JTextField();
-        txtApellidos = new javax.swing.JTextField();
-        txtCedula = new javax.swing.JTextField();
-        txtSueldo = new javax.swing.JTextField();
-        txtTelefono = new javax.swing.JTextField();
-        txtCargo = new javax.swing.JTextField();
-        txtBuscar = new javax.swing.JTextField();
-        txtSupervisor = new javax.swing.JTextField();
-        btnNuevo = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jtEmp = new javax.swing.JTable();
-        btnEliminar = new javax.swing.JButton();
-        txtNombre = new javax.swing.JTextField();
-        btnActualizar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
         pnUsuarios = new javax.swing.JPanel();
         txtUsuario_ID = new javax.swing.JTextField();
         txtUsuario_Nombre = new javax.swing.JTextField();
@@ -140,6 +117,37 @@ public class Menu extends javax.swing.JFrame {
         btnCliente_Buscar = new javax.swing.JButton();
         txtCliente_Cedula = new javax.swing.JTextField();
         txtCliente_Apellidos = new javax.swing.JTextField();
+        pnEmp = new javax.swing.JPanel();
+        txtID = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtCedula = new javax.swing.JTextField();
+        txtSueldo = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtCargo = new javax.swing.JTextField();
+        txtBuscar = new javax.swing.JTextField();
+        txtSupervisor = new javax.swing.JTextField();
+        btnNuevo = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtEmp = new javax.swing.JTable();
+        btnEliminar = new javax.swing.JButton();
+        txtNombre = new javax.swing.JTextField();
+        btnActualizar = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        pnProductos = new javax.swing.JPanel();
+        txtIProducto_ID = new javax.swing.JTextField();
+        txtProducto_Precio = new javax.swing.JTextField();
+        txtProducto_Nombre = new javax.swing.JTextField();
+        btnProducto_Nuevo = new javax.swing.JButton();
+        btnProducto_Actualizar = new javax.swing.JButton();
+        btnProducto_Cancelar = new javax.swing.JButton();
+        btnProducto_Eliminar = new javax.swing.JButton();
+        btnProducto_Editar = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtProductos = new javax.swing.JTable();
+        txtProductos_Buscar = new javax.swing.JTextField();
+        btnProductos_Buscar = new javax.swing.JButton();
         pnPedidos = new javax.swing.JPanel();
         txtPedidos_ID = new javax.swing.JTextField();
         txtPedidos_Entrega = new javax.swing.JTextField();
@@ -156,19 +164,6 @@ public class Menu extends javax.swing.JFrame {
         txtPedidos_Fecha_realizado = new javax.swing.JTextField();
         txtPedidos_ID_Cliente = new javax.swing.JTextField();
         txtPedidos_ID_Producto = new javax.swing.JTextField();
-        pnProductos = new javax.swing.JPanel();
-        txtIProducto_ID = new javax.swing.JTextField();
-        txtProducto_Precio = new javax.swing.JTextField();
-        txtProducto_Nombre = new javax.swing.JTextField();
-        btnProducto_Nuevo = new javax.swing.JButton();
-        btnProducto_Actualizar = new javax.swing.JButton();
-        btnProducto_Cancelar = new javax.swing.JButton();
-        btnProducto_Eliminar = new javax.swing.JButton();
-        btnProducto_Editar = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jtProductos = new javax.swing.JTable();
-        txtProductos_Buscar = new javax.swing.JTextField();
-        btnProductos_Buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -176,127 +171,439 @@ public class Menu extends javax.swing.JFrame {
 
         plMenu.setBackground(new java.awt.Color(51, 51, 51));
         plMenu.setPreferredSize(new java.awt.Dimension(150, 100));
-        plMenu.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(150, 200));
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 65));
 
-        btnMenu_Principal.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Principal.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Principal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/file_32x32.png"))); // NOI18N
-        btnMenu_Principal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Principal.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Principal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_PrincipalActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnMenu_Principal);
+        jButton1.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/file_32x32.png"))); // NOI18N
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton1.setPreferredSize(new java.awt.Dimension(150, 70));
+        jPanel1.add(jButton1);
 
         plMenu.add(jPanel1);
 
-        btnMenu_Empleados.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Empleados.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Empleados.setText("Empleados");
-        btnMenu_Empleados.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Empleados.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Empleados.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Empleados");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton2.setPreferredSize(new java.awt.Dimension(150, 70));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_EmpleadosActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        plMenu.add(btnMenu_Empleados);
+        plMenu.add(jButton2);
 
-        btnMenu_Usuarios.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Usuarios.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Usuarios.setText("Usuarios");
-        btnMenu_Usuarios.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Usuarios.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Usuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_UsuariosActionPerformed(evt);
-            }
-        });
-        plMenu.add(btnMenu_Usuarios);
+        jButton3.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Usuarios");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton3.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton3);
 
-        btnMenu_Clientes.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Clientes.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Clientes.setText("Clientes");
-        btnMenu_Clientes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Clientes.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Clientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_ClientesActionPerformed(evt);
-            }
-        });
-        plMenu.add(btnMenu_Clientes);
+        jButton4.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Clientes");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton4.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton4);
 
-        btnMenu_Pedidos.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Pedidos.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Pedidos.setText("Pedidos");
-        btnMenu_Pedidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Pedidos.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Pedidos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_PedidosActionPerformed(evt);
-            }
-        });
-        plMenu.add(btnMenu_Pedidos);
+        jButton5.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Pedidos");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton5.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton5);
 
-        btnMenu_Productos.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Productos.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Productos.setText("Productos");
-        btnMenu_Productos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Productos.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Productos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_ProductosActionPerformed(evt);
-            }
-        });
-        plMenu.add(btnMenu_Productos);
+        jButton6.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Productos");
+        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton6.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton6);
 
-        btnMenu_Salir.setBackground(new java.awt.Color(255, 0, 0));
-        btnMenu_Salir.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnMenu_Salir.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu_Salir.setText("Salir");
-        btnMenu_Salir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        btnMenu_Salir.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnMenu_Salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu_SalirActionPerformed(evt);
-            }
-        });
-        plMenu.add(btnMenu_Salir);
+        jButton7.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Acerca de");
+        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jButton7.setPreferredSize(new java.awt.Dimension(150, 70));
+        plMenu.add(jButton7);
 
         plNavegacion.add(plMenu, java.awt.BorderLayout.WEST);
 
         pnBody.setBackground(new java.awt.Color(255, 255, 255));
-        pnBody.setLayout(new java.awt.CardLayout());
-
-        JTpaneles.setBackground(new java.awt.Color(255, 255, 255));
-        JTpaneles.setForeground(new java.awt.Color(255, 255, 255));
-        JTpaneles.setTabPlacement(javax.swing.JTabbedPane.RIGHT);
-        JTpaneles.setEnabled(false);
-        JTpaneles.setPreferredSize(new java.awt.Dimension(1368, 786));
+        pnBody.setLayout(new java.awt.BorderLayout());
 
         pnPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         pnPrincipal.setMaximumSize(new java.awt.Dimension(0, 0));
         pnPrincipal.setMinimumSize(new java.awt.Dimension(1368, 786));
         pnPrincipal.setPreferredSize(new java.awt.Dimension(1368, 786));
 
+        pnUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        pnUsuarios.setMaximumSize(new java.awt.Dimension(0, 0));
+        pnUsuarios.setPreferredSize(new java.awt.Dimension(0, 0));
+
+        txtUsuario_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtUsuario_ID.setPreferredSize(new java.awt.Dimension(87, 26));
+        txtUsuario_ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuario_IDActionPerformed(evt);
+            }
+        });
+
+        txtUsuario_Nombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario_Nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre de Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtUsuario_Nombre.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtUsuario_Fecha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario_Fecha.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Registro", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtUsuario_Fecha.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnUsuario_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnUsuario_Nuevo.setText("Nuevo");
+        btnUsuario_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnUsuario_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnUsuario_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnUsuario_Actualizar.setText("Actualizar");
+        btnUsuario_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnUsuario_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
+        btnUsuario_Actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuario_ActualizarActionPerformed(evt);
+            }
+        });
+
+        btnUsuario_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnUsuario_Cancelar.setText("Cancelar");
+        btnUsuario_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnUsuario_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnUsuario_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnUsuario_Eliminar.setText("Eliminar");
+        btnUsuario_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnUsuario_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnUsuario_Editar.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnUsuario_Editar.setText("Editar");
+        btnUsuario_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnUsuario_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        jtUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID_Usuario", "Contraseña", "Nombre de Usuario", "Tipo de Usuario", "Fecha Registro", "Empleado Registrador"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jtUsuarios);
+
+        txtUsuario_Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario_Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        txtUsuario_Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnUsuario_Buscar.setBackground(new java.awt.Color(153, 255, 255));
+        btnUsuario_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnUsuario_Buscar.setText("Buscar");
+        btnUsuario_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        btnUsuario_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
+        btnUsuario_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuario_BuscarActionPerformed(evt);
+            }
+        });
+
+        txtUsuario_Contraseña.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsuario_Contraseña.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtUsuario_Contraseña.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        jComboBox_Usuario.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_Usuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBox_Usuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Normal", " " }));
+        jComboBox_Usuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        txtIUsuario_ID_Empleado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtIUsuario_ID_Empleado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID_Empleado Registrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtIUsuario_ID_Empleado.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        javax.swing.GroupLayout pnUsuariosLayout = new javax.swing.GroupLayout(pnUsuarios);
+        pnUsuarios.setLayout(pnUsuariosLayout);
+        pnUsuariosLayout.setHorizontalGroup(
+            pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnUsuariosLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnUsuariosLayout.createSequentialGroup()
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnUsuariosLayout.createSequentialGroup()
+                                .addComponent(txtUsuario_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUsuario_Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtIUsuario_ID_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(pnUsuariosLayout.createSequentialGroup()
+                                    .addGap(1, 1, 1)
+                                    .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtUsuario_Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(pnUsuariosLayout.createSequentialGroup()
+                                            .addComponent(jComboBox_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtUsuario_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(pnUsuariosLayout.createSequentialGroup()
+                                    .addComponent(btnUsuario_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(82, 82, 82)
+                                    .addComponent(btnUsuario_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(40, 40, 40))
+                    .addGroup(pnUsuariosLayout.createSequentialGroup()
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnUsuario_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnUsuariosLayout.createSequentialGroup()
+                                .addComponent(btnUsuario_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(82, 82, 82)
+                                .addComponent(btnUsuario_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnUsuariosLayout.createSequentialGroup()
+                        .addComponent(txtUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(3193, 3193, 3193))
+        );
+        pnUsuariosLayout.setVerticalGroup(
+            pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnUsuariosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnUsuariosLayout.createSequentialGroup()
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(txtUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnUsuariosLayout.createSequentialGroup()
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtUsuario_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtUsuario_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addComponent(txtUsuario_Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtUsuario_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
+                        .addComponent(txtIUsuario_ID_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnUsuario_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnUsuario_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnUsuario_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnUsuario_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnUsuario_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56))
+        );
+
         javax.swing.GroupLayout pnPrincipalLayout = new javax.swing.GroupLayout(pnPrincipal);
         pnPrincipal.setLayout(pnPrincipalLayout);
         pnPrincipalLayout.setHorizontalGroup(
             pnPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1873, Short.MAX_VALUE)
+            .addComponent(pnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 4490, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         pnPrincipalLayout.setVerticalGroup(
             pnPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 817, Short.MAX_VALUE)
+            .addComponent(pnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        JTpaneles.addTab("", pnPrincipal);
+        pnBody.add(pnPrincipal, java.awt.BorderLayout.CENTER);
+
+        pnClientes.setBackground(new java.awt.Color(255, 255, 255));
+        pnClientes.setMaximumSize(new java.awt.Dimension(0, 0));
+        pnClientes.setPreferredSize(new java.awt.Dimension(0, 0));
+
+        txtCliente_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtCliente_ID.setPreferredSize(new java.awt.Dimension(87, 26));
+        txtCliente_ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCliente_IDActionPerformed(evt);
+            }
+        });
+
+        txtCliente_Nombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_Nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtCliente_Nombre.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtCliente_Telefono.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_Telefono.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Télefono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtCliente_Telefono.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnCliente_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnCliente_Nuevo.setText("Nuevo");
+        btnCliente_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCliente_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnCliente_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnCliente_Actualizar.setText("Actualizar");
+        btnCliente_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCliente_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
+        btnCliente_Actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCliente_ActualizarActionPerformed(evt);
+            }
+        });
+
+        btnCliente_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnCliente_Cancelar.setText("Cancelar");
+        btnCliente_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCliente_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnCliente_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnCliente_Eliminar.setText("Eliminar");
+        btnCliente_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCliente_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnCliente_Editar.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnCliente_Editar.setText("Editar");
+        btnCliente_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCliente_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        jtClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID_Clientes", "Nombre", "Apellidos", "Cedula", "Télefono"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(jtClientes);
+
+        txtCliente_Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        txtCliente_Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnCliente_Buscar.setBackground(new java.awt.Color(153, 255, 255));
+        btnCliente_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnCliente_Buscar.setText("Buscar");
+        btnCliente_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        btnCliente_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
+        btnCliente_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCliente_BuscarActionPerformed(evt);
+            }
+        });
+
+        txtCliente_Cedula.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_Cedula.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cedula", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtCliente_Cedula.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtCliente_Apellidos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtCliente_Apellidos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtCliente_Apellidos.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        javax.swing.GroupLayout pnClientesLayout = new javax.swing.GroupLayout(pnClientes);
+        pnClientes.setLayout(pnClientesLayout);
+        pnClientesLayout.setHorizontalGroup(
+            pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnClientesLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pnClientesLayout.createSequentialGroup()
+                                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(btnCliente_Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnCliente_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(82, 82, 82)
+                                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnCliente_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCliente_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnCliente_Editar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnClientesLayout.createSequentialGroup()
+                                .addComponent(txtCliente_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCliente_Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(txtCliente_Telefono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCliente_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCliente_Apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnClientesLayout.createSequentialGroup()
+                        .addComponent(txtCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(47, 47, 47))
+        );
+        pnClientesLayout.setVerticalGroup(
+            pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnClientesLayout.createSequentialGroup()
+                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnClientesLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCliente_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCliente_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addComponent(txtCliente_Apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(txtCliente_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCliente_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCliente_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCliente_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCliente_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCliente_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCliente_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnClientesLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(txtCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        pnBody.add(pnClientes, java.awt.BorderLayout.LINE_START);
 
         pnEmp.setBackground(new java.awt.Color(255, 255, 255));
         pnEmp.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -475,526 +782,10 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 89, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        JTpaneles.addTab("", pnEmp);
-
-        pnUsuarios.setBackground(new java.awt.Color(255, 255, 255));
-        pnUsuarios.setMaximumSize(new java.awt.Dimension(0, 0));
-        pnUsuarios.setPreferredSize(new java.awt.Dimension(0, 0));
-
-        txtUsuario_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtUsuario_ID.setPreferredSize(new java.awt.Dimension(87, 26));
-        txtUsuario_ID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuario_IDActionPerformed(evt);
-            }
-        });
-
-        txtUsuario_Nombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario_Nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre de Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtUsuario_Nombre.setMaximumSize(new java.awt.Dimension(10, 10));
-        txtUsuario_Nombre.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtUsuario_Fecha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario_Fecha.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Registro", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtUsuario_Fecha.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnUsuario_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnUsuario_Nuevo.setText("Nuevo");
-        btnUsuario_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnUsuario_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnUsuario_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnUsuario_Actualizar.setText("Actualizar");
-        btnUsuario_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnUsuario_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnUsuario_Actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUsuario_ActualizarActionPerformed(evt);
-            }
-        });
-
-        btnUsuario_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnUsuario_Cancelar.setText("Cancelar");
-        btnUsuario_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnUsuario_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnUsuario_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnUsuario_Eliminar.setText("Eliminar");
-        btnUsuario_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnUsuario_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnUsuario_Editar.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnUsuario_Editar.setText("Editar");
-        btnUsuario_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnUsuario_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        jtUsuarios.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID_Usuario", "Contraseña", "Nombre de Usuario", "Tipo de Usuario", "Fecha Registro", "Empleado Registrador"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, true, true, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane4.setViewportView(jtUsuarios);
-
-        txtUsuario_Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario_Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        txtUsuario_Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnUsuario_Buscar.setBackground(new java.awt.Color(153, 255, 255));
-        btnUsuario_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnUsuario_Buscar.setText("Buscar");
-        btnUsuario_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        btnUsuario_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnUsuario_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUsuario_BuscarActionPerformed(evt);
-            }
-        });
-
-        txtUsuario_Contraseña.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario_Contraseña.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtUsuario_Contraseña.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        jComboBox_Usuario.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox_Usuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBox_Usuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Normal", " " }));
-        jComboBox_Usuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-
-        txtIUsuario_ID_Empleado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtIUsuario_ID_Empleado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID_Empleado Registrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtIUsuario_ID_Empleado.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        javax.swing.GroupLayout pnUsuariosLayout = new javax.swing.GroupLayout(pnUsuarios);
-        pnUsuarios.setLayout(pnUsuariosLayout);
-        pnUsuariosLayout.setHorizontalGroup(
-            pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnUsuariosLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnUsuario_Editar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnUsuariosLayout.createSequentialGroup()
-                            .addComponent(btnUsuario_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(82, 82, 82)
-                            .addComponent(btnUsuario_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(txtIUsuario_ID_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario_Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnUsuariosLayout.createSequentialGroup()
-                                .addComponent(jComboBox_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtUsuario_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addComponent(btnUsuario_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(btnUsuario_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addComponent(txtUsuario_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(txtUsuario_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33)
-                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addComponent(txtUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(594, Short.MAX_VALUE))
-        );
-        pnUsuariosLayout.setVerticalGroup(
-            pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnUsuariosLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(txtUsuario_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane4))
-                    .addGroup(pnUsuariosLayout.createSequentialGroup()
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtUsuario_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtUsuario_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
-                        .addComponent(txtUsuario_Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtUsuario_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
-                        .addComponent(txtIUsuario_ID_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnUsuario_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnUsuario_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
-                        .addGroup(pnUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnUsuario_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnUsuario_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addComponent(btnUsuario_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-
-        JTpaneles.addTab("", pnUsuarios);
-
-        pnClientes.setBackground(new java.awt.Color(255, 255, 255));
-        pnClientes.setMaximumSize(new java.awt.Dimension(0, 0));
-        pnClientes.setPreferredSize(new java.awt.Dimension(0, 0));
-
-        txtCliente_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtCliente_ID.setPreferredSize(new java.awt.Dimension(87, 26));
-        txtCliente_ID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCliente_IDActionPerformed(evt);
-            }
-        });
-
-        txtCliente_Nombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_Nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtCliente_Nombre.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtCliente_Telefono.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_Telefono.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Télefono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtCliente_Telefono.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnCliente_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCliente_Nuevo.setText("Nuevo");
-        btnCliente_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnCliente_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnCliente_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCliente_Actualizar.setText("Actualizar");
-        btnCliente_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnCliente_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnCliente_Actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCliente_ActualizarActionPerformed(evt);
-            }
-        });
-
-        btnCliente_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCliente_Cancelar.setText("Cancelar");
-        btnCliente_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnCliente_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnCliente_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCliente_Eliminar.setText("Eliminar");
-        btnCliente_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnCliente_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnCliente_Editar.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnCliente_Editar.setText("Editar");
-        btnCliente_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnCliente_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        jtClientes.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID_Clientes", "Nombre", "Apellidos", "Cedula", "Télefono"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, true, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane3.setViewportView(jtClientes);
-
-        txtCliente_Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        txtCliente_Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnCliente_Buscar.setBackground(new java.awt.Color(153, 255, 255));
-        btnCliente_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnCliente_Buscar.setText("Buscar");
-        btnCliente_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        btnCliente_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnCliente_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCliente_BuscarActionPerformed(evt);
-            }
-        });
-
-        txtCliente_Cedula.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_Cedula.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cedula", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtCliente_Cedula.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtCliente_Apellidos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtCliente_Apellidos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtCliente_Apellidos.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        javax.swing.GroupLayout pnClientesLayout = new javax.swing.GroupLayout(pnClientes);
-        pnClientes.setLayout(pnClientesLayout);
-        pnClientesLayout.setHorizontalGroup(
-            pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnClientesLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(pnClientesLayout.createSequentialGroup()
-                                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btnCliente_Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnCliente_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(82, 82, 82)
-                                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnCliente_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCliente_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(btnCliente_Editar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnClientesLayout.createSequentialGroup()
-                                .addComponent(txtCliente_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtCliente_Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(txtCliente_Telefono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtCliente_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCliente_Apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnClientesLayout.createSequentialGroup()
-                        .addComponent(txtCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(582, Short.MAX_VALUE))
-        );
-        pnClientesLayout.setVerticalGroup(
-            pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnClientesLayout.createSequentialGroup()
-                .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnClientesLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCliente_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCliente_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addComponent(txtCliente_Apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(txtCliente_Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCliente_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCliente_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCliente_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCliente_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCliente_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCliente_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnClientesLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(pnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(txtCliente_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(102, Short.MAX_VALUE))
-        );
-
-        JTpaneles.addTab("", pnClientes);
-
-        pnPedidos.setBackground(new java.awt.Color(255, 255, 255));
-        pnPedidos.setMaximumSize(new java.awt.Dimension(0, 0));
-
-        txtPedidos_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_ID.setPreferredSize(new java.awt.Dimension(87, 26));
-        txtPedidos_ID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPedidos_IDActionPerformed(evt);
-            }
-        });
-
-        txtPedidos_Entrega.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_Entrega.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Entrega", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_Entrega.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtPedidos_Descripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_Descripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descripcion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_Descripcion.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnPedido_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnPedido_Nuevo.setText("Nuevo");
-        btnPedido_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnPedido_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnPedido_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnPedido_Actualizar.setText("Actualizar");
-        btnPedido_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnPedido_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnPedido_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnPedido_Cancelar.setText("Cancelar");
-        btnPedido_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnPedido_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnPedido_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnPedido_Eliminar.setText("Eliminar");
-        btnPedido_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnPedido_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        btnPedido_Editar.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        btnPedido_Editar.setText("Editar");
-        btnPedido_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        btnPedido_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
-
-        jtPedidos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID_Pedidos", "Descripcion", "Fecha de Entrega", "Fecha pedido realizado", "ID Clientes", "ID Producto"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane5.setViewportView(jtPedidos);
-
-        txtPedido__Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedido__Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedido__Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        btnPedido_Buscar.setBackground(new java.awt.Color(153, 255, 255));
-        btnPedido_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnPedido_Buscar.setText("Buscar");
-        btnPedido_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        btnPedido_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
-        btnPedido_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPedido_BuscarActionPerformed(evt);
-            }
-        });
-
-        txtPedidos_Fecha_realizado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_Fecha_realizado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_Fecha_realizado.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtPedidos_ID_Cliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_ID_Cliente.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_ID_Cliente.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        txtPedidos_ID_Producto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtPedidos_ID_Producto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID Producto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        txtPedidos_ID_Producto.setPreferredSize(new java.awt.Dimension(87, 26));
-
-        javax.swing.GroupLayout pnPedidosLayout = new javax.swing.GroupLayout(pnPedidos);
-        pnPedidos.setLayout(pnPedidosLayout);
-        pnPedidosLayout.setHorizontalGroup(
-            pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnPedidosLayout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
-                        .addComponent(txtPedidos_ID_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtPedidos_ID_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtPedidos_Descripcion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtPedidos_ID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPedido_Editar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnPedido_Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPedido_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnPedido_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPedido_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnPedidosLayout.createSequentialGroup()
-                        .addComponent(txtPedidos_Entrega, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtPedidos_Fecha_realizado, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnPedidosLayout.createSequentialGroup()
-                        .addComponent(txtPedido__Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(btnPedido_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(562, Short.MAX_VALUE))
-        );
-        pnPedidosLayout.setVerticalGroup(
-            pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnPedidosLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnPedidosLayout.createSequentialGroup()
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnPedido_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPedido__Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(41, 41, 41)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnPedidosLayout.createSequentialGroup()
-                        .addComponent(txtPedidos_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(txtPedidos_Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPedidos_Entrega, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPedidos_Fecha_realizado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPedidos_ID_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPedidos_ID_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPedido_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPedido_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPedido_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPedido_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addComponent(btnPedido_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
-
-        JTpaneles.addTab("", pnPedidos);
+        pnBody.add(pnEmp, java.awt.BorderLayout.LINE_END);
 
         pnProductos.setBackground(new java.awt.Color(255, 255, 255));
         pnProductos.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -1140,9 +931,182 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        JTpaneles.addTab("", pnProductos);
+        pnBody.add(pnProductos, java.awt.BorderLayout.PAGE_START);
 
-        pnBody.add(JTpaneles, "card8");
+        pnPedidos.setBackground(new java.awt.Color(255, 255, 255));
+        pnPedidos.setMaximumSize(new java.awt.Dimension(0, 0));
+
+        txtPedidos_ID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_ID.setPreferredSize(new java.awt.Dimension(87, 26));
+        txtPedidos_ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPedidos_IDActionPerformed(evt);
+            }
+        });
+
+        txtPedidos_Entrega.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_Entrega.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Entrega", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_Entrega.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtPedidos_Descripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_Descripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descripcion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_Descripcion.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnPedido_Nuevo.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Nuevo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnPedido_Nuevo.setText("Nuevo");
+        btnPedido_Nuevo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPedido_Nuevo.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnPedido_Actualizar.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Actualizar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnPedido_Actualizar.setText("Actualizar");
+        btnPedido_Actualizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPedido_Actualizar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnPedido_Cancelar.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Cancelar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnPedido_Cancelar.setText("Cancelar");
+        btnPedido_Cancelar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPedido_Cancelar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnPedido_Eliminar.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Eliminar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnPedido_Eliminar.setText("Eliminar");
+        btnPedido_Eliminar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPedido_Eliminar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        btnPedido_Editar.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Editar.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        btnPedido_Editar.setText("Editar");
+        btnPedido_Editar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPedido_Editar.setPreferredSize(new java.awt.Dimension(150, 70));
+
+        jtPedidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID_Producto", "Nombre", "Precio"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jtPedidos);
+
+        txtPedido__Buscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedido__Buscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        txtPedido__Buscar.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        btnPedido_Buscar.setBackground(new java.awt.Color(153, 255, 255));
+        btnPedido_Buscar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnPedido_Buscar.setText("Buscar");
+        btnPedido_Buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        btnPedido_Buscar.setPreferredSize(new java.awt.Dimension(150, 70));
+        btnPedido_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedido_BuscarActionPerformed(evt);
+            }
+        });
+
+        txtPedidos_Fecha_realizado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_Fecha_realizado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_Fecha_realizado.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtPedidos_ID_Cliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_ID_Cliente.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_ID_Cliente.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        txtPedidos_ID_Producto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPedidos_ID_Producto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID Producto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        txtPedidos_ID_Producto.setPreferredSize(new java.awt.Dimension(87, 26));
+
+        javax.swing.GroupLayout pnPedidosLayout = new javax.swing.GroupLayout(pnPedidos);
+        pnPedidos.setLayout(pnPedidosLayout);
+        pnPedidosLayout.setHorizontalGroup(
+            pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnPedidosLayout.createSequentialGroup()
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtPedidos_Fecha_realizado, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnPedidosLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnPedidosLayout.createSequentialGroup()
+                                .addComponent(txtPedidos_ID_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtPedidos_ID_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPedidos_Descripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnPedidosLayout.createSequentialGroup()
+                                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPedidos_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPedidos_Entrega, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(btnPedido_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(pnPedidosLayout.createSequentialGroup()
+                                            .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(btnPedido_Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnPedido_Nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(82, 82, 82)
+                                            .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(btnPedido_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnPedido_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(18, 18, 18)
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addComponent(txtPedido__Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnPedido_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(3997, Short.MAX_VALUE))
+        );
+        pnPedidosLayout.setVerticalGroup(
+            pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPedidosLayout.createSequentialGroup()
+                .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(txtPedidos_Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPedidos_Entrega, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPedidos_Fecha_realizado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPedidos_ID_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPedidos_ID_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPedido_Nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPedido_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPedido_Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPedido_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(btnPedido_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnPedidosLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnPedido_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnPedidosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtPedido__Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtPedidos_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(41, 41, 41)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        pnBody.add(pnPedidos, java.awt.BorderLayout.PAGE_START);
 
         plNavegacion.add(pnBody, java.awt.BorderLayout.CENTER);
 
@@ -1151,13 +1115,9 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMenu_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_EmpleadosActionPerformed
-        
-
-        JTpaneles.setSelectedIndex(1);
-        
-        
-    }//GEN-LAST:event_btnMenu_EmpleadosActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
@@ -1203,43 +1163,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPedido_BuscarActionPerformed
 
-    private void btnMenu_PrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_PrincipalActionPerformed
-       
-        
-        JTpaneles.setSelectedIndex(0);
-        
-        
-        
-    }//GEN-LAST:event_btnMenu_PrincipalActionPerformed
-
-    private void btnMenu_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_UsuariosActionPerformed
-        
-        JTpaneles.setSelectedIndex(2);
-        
-    }//GEN-LAST:event_btnMenu_UsuariosActionPerformed
-
-    private void btnMenu_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_ClientesActionPerformed
-        
-        JTpaneles.setSelectedIndex(3);
-        
-    }//GEN-LAST:event_btnMenu_ClientesActionPerformed
-
-    private void btnMenu_PedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_PedidosActionPerformed
-       
-        JTpaneles.setSelectedIndex(4);
-        
-    }//GEN-LAST:event_btnMenu_PedidosActionPerformed
-
-    private void btnMenu_ProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_ProductosActionPerformed
-        
-        JTpaneles.setSelectedIndex(5);
-        
-    }//GEN-LAST:event_btnMenu_ProductosActionPerformed
-
-    private void btnMenu_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu_SalirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMenu_SalirActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1276,7 +1199,6 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane JTpaneles;
     public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnCancelar;
@@ -1288,13 +1210,6 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton btnCliente_Nuevo;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnEliminar;
-    public javax.swing.JButton btnMenu_Clientes;
-    public javax.swing.JButton btnMenu_Empleados;
-    public javax.swing.JButton btnMenu_Pedidos;
-    public javax.swing.JButton btnMenu_Principal;
-    public javax.swing.JButton btnMenu_Productos;
-    public javax.swing.JButton btnMenu_Salir;
-    public javax.swing.JButton btnMenu_Usuarios;
     public javax.swing.JButton btnNuevo;
     public javax.swing.JButton btnPedido_Actualizar;
     public javax.swing.JButton btnPedido_Buscar;
@@ -1314,8 +1229,15 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton btnUsuario_Editar;
     public javax.swing.JButton btnUsuario_Eliminar;
     public javax.swing.JButton btnUsuario_Nuevo;
+    public javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton4;
+    public javax.swing.JButton jButton5;
+    public javax.swing.JButton jButton6;
+    public javax.swing.JButton jButton7;
     public javax.swing.JComboBox<String> jComboBox_Usuario;
-    public javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1328,13 +1250,13 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JTable jtUsuarios;
     private javax.swing.JPanel plMenu;
     private javax.swing.JPanel plNavegacion;
-    public javax.swing.JPanel pnBody;
-    public javax.swing.JPanel pnClientes;
+    private javax.swing.JPanel pnBody;
+    private javax.swing.JPanel pnClientes;
     public javax.swing.JPanel pnEmp;
     private javax.swing.JPanel pnPedidos;
-    public javax.swing.JPanel pnPrincipal;
-    public javax.swing.JPanel pnProductos;
-    public javax.swing.JPanel pnUsuarios;
+    private javax.swing.JPanel pnPrincipal;
+    private javax.swing.JPanel pnProductos;
+    private javax.swing.JPanel pnUsuarios;
     public javax.swing.JTextField txtApellidos;
     public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtCargo;

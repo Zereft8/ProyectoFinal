@@ -1,11 +1,9 @@
 package main;
 
 import Vistas.Menu;
-import Vistas.LoginV;
 import controladores.ControladorEmp;
 import controladores.ControladorProd;
 import controladores.ControladorClient;
-import controladores.ControladorLogin;
 import controladores.ControladorPed;
 import controladores.ControladorUsuario;
 import modelos.EmpleadosDAO;
@@ -31,9 +29,6 @@ public class Main {
     
     public static void main(String[] args) {
         
-        
-        PedidosDAO pdao = new PedidosDAO();
-        PedidosDTO pdto = new PedidosDTO();
         UsuarioDAO usdao = new UsuarioDAO();
         UsuarioDTO usdto = new UsuarioDTO();
         EmpleadosDAO empdao = new EmpleadosDAO();
@@ -42,19 +37,19 @@ public class Main {
         ProductosDTO proddto = new ProductosDTO();
         ClientesDAO clientdao = new ClientesDAO();
         ClientesDTO clientdto = new ClientesDTO();
+        PedidosDAO pedao = new PedidosDAO();
+        PedidosDTO pedto = new PedidosDTO();
         
         Menu menu = new Menu();
-        
         ControladorUsuario us = new ControladorUsuario(menu);
         ControladorEmp cemp = new ControladorEmp(menu);
         ControladorProd cprod =new ControladorProd (menu);
-        ControladorClient cclient =new ControladorClient (menu);
-        ControladorPed cp =new ControladorPed (menu);
+         ControladorClient cclien =new ControladorClient (menu);
+        ControladorPed cped =new ControladorPed (menu);
+    
         
-        LoginV lv = new LoginV();
-        lv.setVisible(true);
-        lv.setLocationRelativeTo(null);
-        ControladorLogin cl = new ControladorLogin(lv);
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         
         
     }
