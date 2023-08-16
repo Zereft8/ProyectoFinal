@@ -216,12 +216,12 @@ public class ControladorUsuario implements ActionListener {
             
             if (validarCampos(vistaMenu) > 0) {
                 
-                int id = Integer.parseInt(vistaMenu.txtUsuario_ID.getText());
+                int id = Integer.parseInt(vistaMenu.txtUsuario_ID.getText().trim());
                 String password = vistaMenu.txtUsuario_Contraseña.getText();
                 String nombre_usuario = vistaMenu.txtUsuario_Nombre.getText();
                 String tipo_usuario = vistaMenu.jComboBox_Usuario.getToolTipText();
                 String fecha_registro = vistaMenu.txtUsuario_Fecha.getText();
-                int id_empleados = Integer.parseInt(vistaMenu.txtIUsuario_ID_Empleado.getText());
+                int id_empleados = Integer.parseInt(vistaMenu.txtIUsuario_ID_Empleado.getText().trim());
                 
                 
                 SimpleDateFormat sdfEntrada = new SimpleDateFormat("dd/MM/yyyy");
