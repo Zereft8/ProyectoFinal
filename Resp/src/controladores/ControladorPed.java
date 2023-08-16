@@ -68,7 +68,7 @@ public class ControladorPed implements ActionListener {
         //Limpiar formulario y Listar contactos
         
         limpiarCampos(m);
-        leer(vistaMenu.jtUsuarios);
+        leer(vistaMenu.jtPedidos);
         
     }
     
@@ -102,7 +102,7 @@ public class ControladorPed implements ActionListener {
             modelo.addRow(object);
         }
         
-        vistaMenu.jtUsuarios.setModel(modelo);
+        vistaMenu.jtPedidos.setModel(modelo);
     }
     
     
@@ -133,7 +133,8 @@ public class ControladorPed implements ActionListener {
                 
                 modelo.addRow(object);
             }
-            vistaMenu.jtUsuarios.setModel(modelo);
+            
+            vistaMenu.jtPedidos.setModel(modelo);
         }
     
      /**
@@ -219,12 +220,12 @@ public class ControladorPed implements ActionListener {
             
             if (validarCampos(vistaMenu) > 0) {
                 
-                int id = Integer.parseInt(vistaMenu.txtPedidos_ID.getText());
+                int id = Integer.parseInt(vistaMenu.txtPedidos_ID.getText().trim());
                 String Descripcion = vistaMenu.txtPedidos_Descripcion.getText();
                 String fecha_entrega = vistaMenu.txtPedidos_Entrega.getText();
                 String fecha_pedido = vistaMenu.txtPedidos_Fecha_realizado.getText();
-                 int id_clientes = Integer.parseInt(vistaMenu.txtPedidos_ID_Cliente.getText());
-                int id_productos = Integer.parseInt(vistaMenu.txtPedidos_ID_Producto.getText());
+                int id_clientes = Integer.parseInt(vistaMenu.txtPedidos_ID_Cliente.getText().trim());
+                int id_productos = Integer.parseInt(vistaMenu.txtPedidos_ID_Producto.getText().trim());
                 
                 
                 
@@ -235,12 +236,18 @@ public class ControladorPed implements ActionListener {
 
                 try {
                     
-                    java.util.Date fechaUtil = sdfEntrada.parse(fecha_entrega);
-                    String fechaSqlStr = sdfSalida.format(fechaUtil);
-                    Date fechaentrega = Date.valueOf(fechaSqlStr);
+                    java.util.Date fechaConvert_entrega = sdfEntrada.parse(fecha_entrega);
+                    String fechaSqlStr = sdfSalida.format(fechaConvert_entrega);
+                    Date fecha_Entrega = Date.valueOf(fechaSqlStr);
                     
+                    java.util.Date fechaConvert_pedido = sdfEntrada.parse(fecha_pedido);
+                    String fechaDb_str = sdfSalida.format(fechaConvert_pedido);
+                    Date fecha_Pedido = Date.valueOf(fechaDb_str);
+                    
+                    pedto.setId(id);
                     pedto.setDescripcion(Descripcion);
-                    pedto.setFecha_entrega(fechaentrega);
+                    pedto.setFecha_entrega(fecha_Entrega);
+                    pedto.setFecha_pedidos(fecha_Pedido);
                     pedto.setId_clientes(id_clientes);
                     pedto.setId_productos(id_productos);
                     
@@ -249,29 +256,8 @@ public class ControladorPed implements ActionListener {
                     e.printStackTrace();
                     
                 }
-                    SimpleDateFormat sdfEntradas = new SimpleDateFormat("dd/MM/yyyy");
-                    SimpleDateFormat sdfSalidas = new SimpleDateFormat("yyyy-MM-dd");
-
-                    try {
-
-                        java.util.Date fechaUtl = sdfEntradas.parse(fecha_pedido);
-                        String fechaSqlSt = sdfSalidas.format(fechaUtl);
-                        Date fechapedido = Date.valueOf(fechaSqlSt);
-                        
-                        
-                        pedto.setDescripcion(Descripcion);
-                        pedto.setFecha_pedidos(fechapedido);
-                        pedto.setId_clientes(id_clientes);
-                        pedto.setId_productos(id_productos);
-
-                        } catch (ParseException e) {
                     
-                    e.printStackTrace();
-                    
-                }
-                   
            
-
                 r = pedao.actualizar(pedto);
                 if (r == 1) {
                     
@@ -340,23 +326,28 @@ public class ControladorPed implements ActionListener {
             limpiarCampos(vistaMenu);
             
         }else {
-            //ESTA PARTE
-            int id = Integer.parseInt((String) vistaMenu.jtPedidos.getValueAt(fila, 0).toString());
-            String Descripcion = (String) vistaMenu.jtPedidos.getValueAt(fila, 1);
-            String fecha_entrega = (String) vistaMenu.jtPedidos.getValueAt(fila, 2);
             
-            Date fechaSQL = (Date) vistaMenu.jtPedidos.getValueAt(fila, 3);
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            String fechaStr = sdf.format(fechaSQL);
+            //ESTA PARTE
+            
+            int id = Integer.parseInt((String) vistaMenu.jtPedidos.getValueAt(fila, 0).toString());
+            
+            String Descripcion = (String) vistaMenu.jtPedidos.getValueAt(fila, 1);
+            Date fechaConvert = (Date) vistaMenu.jtPedidos.getValueAt(fila, 2);
+            SimpleDateFormat sdfe = new SimpleDateFormat("dd/MM/yyyy");
+            String fecha_entrega = sdfe.format(fechaConvert);
+            
+            Date fechaConvert_2 = (Date) vistaMenu.jtPedidos.getValueAt(fila, 3);
+            SimpleDateFormat sdfp = new SimpleDateFormat("dd/MM/yyyy");
+            String fecha_pedido = sdfp.format(fechaConvert_2);
 
             int id_clientes = Integer.parseInt((String) vistaMenu.jtPedidos.getValueAt(fila, 4).toString());
-             int  id_productos = Integer.parseInt((String) vistaMenu.jtPedidos.getValueAt(fila, 5).toString());
+            int  id_productos = Integer.parseInt((String) vistaMenu.jtPedidos.getValueAt(fila, 5).toString());
             
 
             vistaMenu.txtPedidos_ID.setText(" " + id);
             vistaMenu.txtPedidos_Descripcion.setText(Descripcion);
-            vistaMenu.txtPedidos_Entrega.setText(fechaStr);
-            vistaMenu.txtPedidos_Fecha_realizado.setText(fechaStr);
+            vistaMenu.txtPedidos_Entrega.setText(fecha_entrega);
+            vistaMenu.txtPedidos_Fecha_realizado.setText(fecha_pedido);
             vistaMenu.txtPedidos_ID_Cliente.setText(" "+ id_clientes);
             vistaMenu.txtPedidos_ID_Producto.setText(" "+ id_productos);
 
@@ -430,7 +421,8 @@ public class ControladorPed implements ActionListener {
            m.txtPedidos_Entrega.setText("");
            m.txtPedidos_Fecha_realizado.setText("");
            m.txtPedidos_ID_Cliente.setText("");
-           m.txtPedidos_ID_Producto.requestFocus();
+           m.txtPedidos_ID_Producto.setText("");
+           m.txtPedidos_Descripcion.requestFocus();
 
 
        }
@@ -457,7 +449,7 @@ public class ControladorPed implements ActionListener {
             this.vistaMenu.btnPedido_Eliminar.setEnabled(true);
             
          }
-        if (e.getSource() == vistaMenu.btnUsuario_Actualizar) { // GUARDAR
+        if (e.getSource() == vistaMenu.btnPedido_Actualizar) { // GUARDAR
             actualizar();
             
             this.vistaMenu.btnPedido_Actualizar.setEnabled(false);
@@ -468,7 +460,7 @@ public class ControladorPed implements ActionListener {
             leer(vistaMenu.jtPedidos);
             vistaMenu.txtUsuario_Nombre.requestFocus();
         }
-        if (e.getSource() == vistaMenu.btnUsuario_Eliminar) {
+        if (e.getSource() == vistaMenu.btnPedido_Eliminar) {
             eliminar();
             this.vistaMenu.btnPedido_Nuevo.setEnabled(true);
             this.vistaMenu.btnPedido_Actualizar.setEnabled(false);
@@ -476,7 +468,8 @@ public class ControladorPed implements ActionListener {
             limpiarTabla();
             leer(vistaMenu.jtPedidos);
         }
-        if (e.getSource() == vistaMenu.btnUsuario_Cancelar) {
+        if (e.getSource() == vistaMenu.btnPedido_Cancelar) {
+            
             this.vistaMenu.btnPedido_Nuevo.setEnabled(true);
             this.vistaMenu.btnPedido_Editar.setEnabled(true);            
             this.vistaMenu.btnPedido_Actualizar.setEnabled(false);
