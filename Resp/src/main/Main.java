@@ -1,5 +1,6 @@
 package main;
 
+
 import Vistas.Menu;
 import Vistas.LoginV;
 import controladores.ControladorEmp;
@@ -14,11 +15,9 @@ import modelos.ProductosDAO;
 import modelos.ProductosDTO;
 import modelos.ClientesDAO;
 import modelos.ClientesDTO;
+import modelos.PedidosDAO;
 import modelos.UsuarioDAO;
 import modelos.UsuarioDTO;
-import modelos.PedidosDAO;
-import modelos.PedidosDTO;
-
 
 
 
@@ -27,13 +26,14 @@ import modelos.PedidosDTO;
  * @author MSI
  */
 
+
+
 public class Main {
     
     public static void main(String[] args) {
         
-        
+        PedidosDAO pdto = new PedidosDAO();
         PedidosDAO pdao = new PedidosDAO();
-        PedidosDTO pdto = new PedidosDTO();
         UsuarioDAO usdao = new UsuarioDAO();
         UsuarioDTO usdto = new UsuarioDTO();
         EmpleadosDAO empdao = new EmpleadosDAO();
@@ -45,11 +45,11 @@ public class Main {
         
         Menu menu = new Menu();
         
+        ControladorPed cp = new ControladorPed(menu);
         ControladorUsuario us = new ControladorUsuario(menu);
         ControladorEmp cemp = new ControladorEmp(menu);
         ControladorProd cprod =new ControladorProd (menu);
         ControladorClient cclient =new ControladorClient (menu);
-        ControladorPed cp =new ControladorPed (menu);
         
         LoginV lv = new LoginV();
         lv.setVisible(true);

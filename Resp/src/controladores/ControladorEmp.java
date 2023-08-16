@@ -19,22 +19,22 @@ import modelos.EmpleadosDTO;
 public class ControladorEmp implements ActionListener {
     
      /**
-     * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
-     * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
-     * Modelo donde se cargan los datos de la tabla
-     */
+      * En esta parte se instancian el DAO y DTO 
+      * tambien se instancia la vista Menu para poder conectar la
+      * vista con el modelo.
+      */
     
-        EmpleadosDAO empdao = new EmpleadosDAO();
-        EmpleadosDTO empdto = new EmpleadosDTO();
-        Menu vistaMenu = new Menu();
-        DefaultTableModel modelo = new DefaultTableModel();
+    EmpleadosDAO empdao = new EmpleadosDAO();
+    EmpleadosDTO empdto = new EmpleadosDTO();
+    Menu vistaMenu = new Menu();
+    
+    DefaultTableModel modelo = new DefaultTableModel();
     
     
     /**
      * Constructor de la clase Controlador, se encarga de inicializar los
      * componentes del formulario de Empleados. Recibe como parameto la ventana
      * "Menu".
-     *
      * @param m
      */
     
@@ -57,10 +57,8 @@ public class ControladorEmp implements ActionListener {
         this.vistaMenu.btnEliminar.setEnabled(true);
         this.vistaMenu.btnBuscar.setEnabled(true);
         
-     
-        vistaMenu.txtID.enable(false);
+        this.vistaMenu.txtID.setEnabled(false);
 
-        
         //Limpiar formulario y Listar contactos
         
         limpiarCampos(m);
@@ -80,7 +78,9 @@ public class ControladorEmp implements ActionListener {
         limpiarTabla();
         
         modelo = (DefaultTableModel) tabla.getModel();
+        
         List<EmpleadosDTO> lista = (List<EmpleadosDTO>) empdao.listarRegistro(vistaMenu.txtBuscar.getText());
+        
         Object[] object = new Object[8];
         
         for (int i = 0; i < lista.size(); i++) {
@@ -108,6 +108,7 @@ public class ControladorEmp implements ActionListener {
      *
      * @param tabla
      */
+    
         public final void leer(JTable tabla) {
             
             limpiarTabla();
@@ -132,11 +133,11 @@ public class ControladorEmp implements ActionListener {
             vistaMenu.jtEmp.setModel(modelo);
         }
     
+        
      /**
      * Este metodo se encarga de limpiar los datos de la tabla antes de cargarla
      * al inicio o al refrescar los datos.
      */
-    
 
         
     public void limpiarTabla() {
@@ -146,10 +147,10 @@ public class ControladorEmp implements ActionListener {
             
         }
     }
-
+    
     
      /**
-     * Este metodo se encarga de registrar un nuevo contacto.
+     * Este metodo se encarga de registrar un nuevo Empleado.
      */
     
     public void nuevo() {
@@ -295,7 +296,7 @@ public class ControladorEmp implements ActionListener {
     
      /**
      * Este metodo pone en modo edicion el formulario y carga los datos del
-     * contacto a ser modificado.
+     * empleado que sera modificado.
      */
     
         public void editar() {
@@ -340,9 +341,8 @@ public class ControladorEmp implements ActionListener {
     /**
      * Este metodo valida los campos del formulario y devuelve si los campos han
      * sido validados.
-     *
      * @param m
-     * @return validacion
+     * @return 
      */
     
     
@@ -403,6 +403,7 @@ public class ControladorEmp implements ActionListener {
         *
         * @param m
         */
+    
        public final void limpiarCampos(Menu m) {
 
            m.txtID.setText("");
@@ -424,7 +425,6 @@ public class ControladorEmp implements ActionListener {
      *
      * @param e
      */
-       
     @Override
     public void actionPerformed(ActionEvent e) {
         

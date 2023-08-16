@@ -47,7 +47,7 @@ public class ControladorLogin implements ActionListener {
     private void limpiarCampos(LoginV ldto) {
         
         ldto.txtLogin_Usuario.setText("");
-        ldto.txtLogin_Contraseña.setText("");
+        ldto.txtLogin_Contraseña1.setText("");
         ldto.txtLogin_Usuario.requestFocus();
         
     }
@@ -64,9 +64,9 @@ public class ControladorLogin implements ActionListener {
             ldto.txtLogin_Usuario.requestFocus();
             return false;
         }
-        if (ldto.txtLogin_Contraseña.getText().trim().isEmpty()) {
+        if (ldto.txtLogin_Contraseña1.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(loginv, "El campo de la contraseña no debe estar vacio!", "Error!", JOptionPane.ERROR_MESSAGE);
-            ldto.txtLogin_Contraseña.requestFocus();
+            ldto.txtLogin_Contraseña1.requestFocus();
             return false;
         }
         return true;
@@ -83,24 +83,42 @@ public class ControladorLogin implements ActionListener {
      */
     
     public boolean AccionarLogin(String usuario, String password, LoginV log) {
+        
         if (validarCampos(log)) {
+            
             System.out.println("campos del formulario validados que no esten vacios!");
+            
             try {
+                
                 System.out.println("verificando si los datos existen!");
+                
                 if (ldao.realizarLogin(usuario, password)) {
                     JOptionPane.showMessageDialog(loginv, "Ingresado con exito!", "Exito!", JOptionPane.INFORMATION_MESSAGE);
                     log.setVisible(false);
-                    System.out.println("ingresando a formulario de contactos contactos!");
-                    Menu m = new Menu();
-                    ControladorEmp control = new ControladorEmp(m);
+                    
+                    System.out.println("ingresando al sistema de reposteria!");
+                    
+                        Menu m = new Menu();
+                        ControladorEmp control = new ControladorEmp(m);
+                        ControladorPed cp = new ControladorPed(m);
+                        ControladorUsuario us = new ControladorUsuario(m); 
+                        ControladorProd cprod =new ControladorProd (m);
+                        ControladorClient cclient =new ControladorClient (m);
+                        
                     m.setVisible(true);
                     m.setLocationRelativeTo(null);
+                    
                     return true;
+                    
                 } else{
+                    
                     JOptionPane.showMessageDialog(log,"Error al tratar de ingresar.\n El usuario o la clave estan incorrectos!", "Error!",JOptionPane.ERROR_MESSAGE);
                     limpiarCampos(log);
+                    
                     return false;
+                    
                 }
+                
             } catch (HeadlessException e) {
                 JOptionPane.showMessageDialog(loginv, "Error al tratar de ingresar: " + e, "Error!", JOptionPane.ERROR_MESSAGE);
             }
@@ -123,7 +141,7 @@ public class ControladorLogin implements ActionListener {
         if (e.getSource() == loginv.btnIniciar_Sesion) {
             
             String usuario = loginv.txtLogin_Usuario.getText();
-            String clave   = loginv.txtLogin_Contraseña.getText();
+            String clave   = loginv.txtLogin_Contraseña1.getText();
             AccionarLogin(usuario, clave, loginv);
             
         }
