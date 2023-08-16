@@ -7,7 +7,7 @@ package modelos;
  */
 public class ClientesDTO {
     
-     int id;
+    int id;
     String nombre;
     String apellidos;
     String cedula;
