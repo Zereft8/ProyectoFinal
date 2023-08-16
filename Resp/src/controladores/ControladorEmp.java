@@ -24,10 +24,10 @@ public class ControladorEmp implements ActionListener {
      * Modelo donde se cargan los datos de la tabla
      */
     
-    EmpleadosDAO empdao = new EmpleadosDAO();
-    EmpleadosDTO empdto = new EmpleadosDTO();
-    Menu vistaMenu = new Menu();
-    DefaultTableModel modelo = new DefaultTableModel();
+        EmpleadosDAO empdao = new EmpleadosDAO();
+        EmpleadosDTO empdto = new EmpleadosDTO();
+        Menu vistaMenu = new Menu();
+        DefaultTableModel modelo = new DefaultTableModel();
     
     
     /**
@@ -58,7 +58,9 @@ public class ControladorEmp implements ActionListener {
         this.vistaMenu.btnBuscar.setEnabled(true);
         
      
+        vistaMenu.txtID.enable(false);
 
+        
         //Limpiar formulario y Listar contactos
         
         limpiarCampos(m);
@@ -422,6 +424,7 @@ public class ControladorEmp implements ActionListener {
      *
      * @param e
      */
+       
     @Override
     public void actionPerformed(ActionEvent e) {
         
