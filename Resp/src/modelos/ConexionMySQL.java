@@ -18,14 +18,19 @@ public class ConexionMySQL {
    public Connection conectar(){
        
         try{
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "1308");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/reposteria", "root", "");
             System.out.println("Estamos conectados con exito.");
             
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println("Error en la conexion :" + ex);
         }
         return con;
+    }
+
+    public void close() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }   
 

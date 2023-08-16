@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controladores;
 
 import Vistas.Menu;
@@ -21,6 +18,7 @@ import java.text.SimpleDateFormat;
  *
  * @author Elianny
  */
+
 public class ControladorPed implements ActionListener {
     
     
@@ -71,6 +69,7 @@ public class ControladorPed implements ActionListener {
         
         limpiarCampos(m);
         leer(vistaMenu.jtUsuarios);
+        
     }
     
     

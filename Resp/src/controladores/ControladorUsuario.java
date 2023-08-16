@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
  * @author MSI
  */
 
+
 public class ControladorUsuario implements ActionListener {
     
     
@@ -42,7 +43,7 @@ public class ControladorUsuario implements ActionListener {
      * @param m
      */
     
-    public ControladorUsuario(Menu m) {
+    public ControladorUsuario(Menu m){
         
         this.vistaMenu = m;
         
@@ -52,18 +53,17 @@ public class ControladorUsuario implements ActionListener {
         this.vistaMenu.btnUsuario_Cancelar.addActionListener(this);
         this.vistaMenu.btnUsuario_Buscar.addActionListener(this);
         this.vistaMenu.btnUsuario_Editar.addActionListener(this);
-        this.vistaMenu.btnUsuario_Buscar.addActionListener(this);
+        this.vistaMenu.txtUsuario_Buscar.addActionListener(this);
 
         this.vistaMenu.btnUsuario_Nuevo.setEnabled(true);
         this.vistaMenu.btnUsuario_Actualizar.setEnabled(false);
         this.vistaMenu.btnUsuario_Buscar.setEnabled(true);
         this.vistaMenu.btnUsuario_Cancelar.setEnabled(true);
         this.vistaMenu.btnUsuario_Eliminar.setEnabled(true);
-        this.vistaMenu.btnUsuario_Buscar.setEnabled(true);
         
-        vistaMenu.txtUsuario_ID.enable(false);
+        this.vistaMenu.txtUsuario_ID.setEnabled(false);
 
-     
+
 
         //Limpiar formulario y Listar contactos
         
