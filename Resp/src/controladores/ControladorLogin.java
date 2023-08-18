@@ -18,10 +18,9 @@ import Vistas.Menu;
 
 public class ControladorLogin implements ActionListener {
     
+    
      /**
-     * Declaracion de los objetos necesarios: dao = Data Access Object c =
-     * Estructura de datos del objeto vista = Formulario de contactos modelo =
-     * Modelo donde se cargan los datos de la tabla
+      * Instanciando el Dao, Dto y la vista para poder comunicarse con la base de datos y actualizar la vista
      */
     
     LoginDAO ldao = new LoginDAO();
@@ -99,11 +98,14 @@ public class ControladorLogin implements ActionListener {
                     System.out.println("ingresando al sistema de reposteria!");
                     
                         Menu m = new Menu();
+                        
                         ControladorEmp control = new ControladorEmp(m);
                         ControladorPed cp = new ControladorPed(m);
                         ControladorUsuario us = new ControladorUsuario(m); 
                         ControladorProd cprod =new ControladorProd (m);
                         ControladorClient cclient =new ControladorClient (m);
+                        ControladorSalida salir = new ControladorSalida(m);
+                        ControladorPed cped = new ControladorPed(m);
                         
                     m.setVisible(true);
                     m.setLocationRelativeTo(null);

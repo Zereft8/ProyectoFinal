@@ -23,10 +23,8 @@ import java.text.SimpleDateFormat;
 public class ControladorUsuario implements ActionListener {
     
     
-    /**
-     * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
-     * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
-     * Modelo donde se cargan los datos de la tabla
+     /**
+      * Instanciando el Dao, Dto, la vista y un objeto de tipo DefaultTableModel para poder comunicarse con la base de datos y actualizar la vista
      */
     
     UsuarioDAO usdao = new UsuarioDAO();
@@ -37,7 +35,7 @@ public class ControladorUsuario implements ActionListener {
     
     /**
      * Constructor de la clase Controlador, se encarga de inicializar los
-     * componentes del formulario de Empleados. Recibe como parameto la ventana
+     * componentes del formulario de Usuario. Recibe como parameto la ventana
      * "Menu".
      *
      * @param m
@@ -65,7 +63,7 @@ public class ControladorUsuario implements ActionListener {
 
 
 
-        //Limpiar formulario y Listar contactos
+        //Limpia el Jtable y Leer los clientes
         
         limpiarCampos(m);
         leer(vistaMenu.jtUsuarios);
@@ -74,7 +72,7 @@ public class ControladorUsuario implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * Usuario.
      *
      * @param tabla
      */
@@ -107,7 +105,7 @@ public class ControladorUsuario implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * Usuario.
      *
      * @param tabla
      */
@@ -151,7 +149,7 @@ public class ControladorUsuario implements ActionListener {
 
     
      /**
-     * Este metodo se encarga de registrar un nuevo contacto.
+     * Este metodo se encarga de hacer un nuevo registro.
      */
     
     public void nuevo() {
@@ -196,7 +194,7 @@ public class ControladorUsuario implements ActionListener {
     
     
      /**
-     * Este metodo se encarga de actualizar el contacto seleccionado dentro de
+     * Este metodo se encarga de actualizar el registro seleccionado dentro de
      * la tabla.
      */
     
@@ -298,7 +296,7 @@ public class ControladorUsuario implements ActionListener {
     
      /**
      * Este metodo pone en modo edicion el formulario y carga los datos del
-     * contacto a ser modificado.
+     * usuario a ser modificado.
      */
     
         public void editar() {
