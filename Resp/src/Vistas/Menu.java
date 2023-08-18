@@ -29,6 +29,8 @@ public class Menu extends javax.swing.JFrame {
         
         initComponents();
         
+        icono();
+        
         ajusteImg(jLabelLogo,"src/Imagenes/Logo.png");
 
         JTpaneles.setTabPlacement(JTpaneles.TOP); 
@@ -40,6 +42,7 @@ public class Menu extends javax.swing.JFrame {
             btn.setBackground(new Color(86,86,86));
             btn.setUI(new BasicButtonUI());
             btn.addMouseListener(new MouseListener(){
+                
                 
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -74,11 +77,9 @@ public class Menu extends javax.swing.JFrame {
             });
 
         }
-   
-        
+    
     }
-    
-    
+
    
     public void ajusteImg(JLabel labelnombre,String root){
     
@@ -86,6 +87,13 @@ public class Menu extends javax.swing.JFrame {
         Icon icon = new  ImageIcon(img.getImage().getScaledInstance(labelnombre.getWidth(), labelnombre.getHeight(),Image.SCALE_SMOOTH));
         labelnombre.setIcon(icon);
         this.repaint();
+        
+    }
+    
+       public void icono(){
+    
+        ImageIcon icono = new ImageIcon("src/Imagenes/Logo2.jpg");
+        this.setIconImage(icono.getImage());
         
     }
     
@@ -1551,4 +1559,6 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JTextField txtUsuario_ID;
     public javax.swing.JTextField txtUsuario_Nombre;
     // End of variables declaration//GEN-END:variables
+
+
 }

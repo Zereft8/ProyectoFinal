@@ -26,6 +26,8 @@ public class LoginV extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         
+        icono();
+        
         ajusteImg(jlabelMenu,"src/Imagenes/menu.png");
         
         JButton [] btns = {btnIniciar_Sesion};
@@ -71,6 +73,14 @@ public class LoginV extends javax.swing.JFrame {
         Icon icon = new  ImageIcon(img.getImage().getScaledInstance(labelnombre.getWidth(), labelnombre.getHeight(),Image.SCALE_AREA_AVERAGING));
         labelnombre.setIcon(icon);
         this.repaint();
+        
+    }
+    
+    
+    public void icono(){
+    
+        ImageIcon icono = new ImageIcon("src/Imagenes/Logo2.jpg");
+        this.setIconImage(icono.getImage());
         
     }
     
