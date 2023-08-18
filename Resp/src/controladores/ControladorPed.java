@@ -22,11 +22,10 @@ import java.text.SimpleDateFormat;
 public class ControladorPed implements ActionListener {
     
     
-    /**
-     * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
-     * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
-     * Modelo donde se cargan los datos de la tabla
+     /**
+      * Instanciando el Dao, Dto, la vista y un objeto de tipo DefaultTableModel para poder comunicarse con la base de datos y actualizar la vista
      */
+    
     
     PedidosDAO pedao = new PedidosDAO();
     PedidosDTO pedto = new PedidosDTO();
@@ -35,7 +34,7 @@ public class ControladorPed implements ActionListener {
     
     
     /**
-     * Constructor de la clase Controlador, se encarga de inicializar los
+     * Constructor de la clase ControladorPed, se encarga de inicializar los
      * componentes del formulario de Empleados. Recibe como parameto la ventana
      * "Menu".
      *
@@ -65,7 +64,7 @@ public class ControladorPed implements ActionListener {
 
      
 
-        //Limpiar formulario y Listar contactos
+        //Limpia el Jtable y Leer los clientes
         
         limpiarCampos(m);
         leer(vistaMenu.jtPedidos);
@@ -75,7 +74,7 @@ public class ControladorPed implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * Pedidos.
      *
      * @param tabla
      */
@@ -108,7 +107,7 @@ public class ControladorPed implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * pedidos.
      *
      * @param tabla
      */
@@ -227,9 +226,6 @@ public class ControladorPed implements ActionListener {
                 int id_clientes = Integer.parseInt(vistaMenu.txtPedidos_ID_Cliente.getText().trim());
                 int id_productos = Integer.parseInt(vistaMenu.txtPedidos_ID_Producto.getText().trim());
                 
-                
-                
-                //ARREGLARR
                 
                 SimpleDateFormat sdfEntrada = new SimpleDateFormat("dd/MM/yyyy");
                 SimpleDateFormat sdfSalida = new SimpleDateFormat("yyyy-MM-dd");

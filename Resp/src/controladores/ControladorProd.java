@@ -19,11 +19,11 @@ import modelos.ProductosDTO;
  */
 public class ControladorProd implements ActionListener{
     
-    /**
-     * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
-     * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
-     * Modelo donde se cargan los datos de la tabla
+    
+     /**
+      * Instanciando el Dao, Dto, la vista y un objeto de tipo DefaultTableModel para poder comunicarse con la base de datos y actualizar la vista
      */
+    
     
     ProductosDAO proddao = new ProductosDAO();
     ProductosDTO proddto = new ProductosDTO();
@@ -33,7 +33,7 @@ public class ControladorProd implements ActionListener{
     
     /**
      * Constructor de la clase Controlador, se encarga de inicializar los
-     * componentes del formulario de Empleados. Recibe como parameto la ventana
+     * componentes del formulario de Producto. Recibe como parameto la ventana
      * "Menu".
      *
      * @param m
@@ -64,7 +64,7 @@ public class ControladorProd implements ActionListener{
         
      
 
-        //Limpiar formulario y Listar contactos
+        //Limpia el Jtable y Leer los clientes
         
         limpiarCampos(m);
         
@@ -104,7 +104,7 @@ public class ControladorProd implements ActionListener{
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * productos.
      *
      * @param tabla
      */
@@ -145,7 +145,7 @@ public class ControladorProd implements ActionListener{
 
     
      /**
-     * Este metodo se encarga de registrar un nuevo contacto.
+     * Este metodo se encarga de hacer un nuevo registro.
      */
     
     public void nuevo() {
@@ -180,7 +180,7 @@ public class ControladorProd implements ActionListener{
     
     
      /**
-     * Este metodo se encarga de actualizar el contacto seleccionado dentro de
+     * Este metodo se encarga de actualizar el cliente seleccionado dentro de
      * la tabla.
      */
     
@@ -269,7 +269,7 @@ public class ControladorProd implements ActionListener{
     
      /**
      * Este metodo pone en modo edicion el formulario y carga los datos del
-     * contacto a ser modificado.
+     * producto a ser modificado.
      */
     
         public void editar() {

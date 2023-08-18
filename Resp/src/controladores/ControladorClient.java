@@ -5,6 +5,7 @@ package controladores;
  *
  * @author Elianny
  */
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -16,11 +17,13 @@ import modelos.ClientesDAO;
 import modelos.ClientesDTO;
 
 public class ControladorClient  implements ActionListener {
-      /**
-     * Declaracion de los objetos necesarios: DAO = Data Access Object empdao =
-     * Estructura de datos del objeto vistaMenu = Formulario de Empleados modelo =
-     * Modelo donde se cargan los datos de la tabla
+    
+    
+    
+     /**
+      * Instanciando el Dao, Dto, la vista y un objeto de tipo DefaultTableModel para poder comunicarse con la base de datos y actualizar la vista
      */
+
     
     ClientesDAO clientdao = new ClientesDAO();
     ClientesDTO clientdto = new ClientesDTO();
@@ -29,8 +32,8 @@ public class ControladorClient  implements ActionListener {
     
     
     /**
-     * Constructor de la clase Controlador, se encarga de inicializar los
-     * componentes del formulario de Empleados. Recibe como parameto la ventana
+     * Constructor de la clase ControladorClient, se encarga de inicializar los
+     * componentes del formulario de Clientes. Recibe como parameto la ventana
      * "Menu".
      *
      * @param m
@@ -58,7 +61,7 @@ public class ControladorClient  implements ActionListener {
         vistaMenu.txtCliente_ID.enable(false);
      
 
-        //Limpiar formulario y Listar contactos
+        //Limpia el Jtable y Leer los clientes
         
         limpiarCampos(m);
         leer(vistaMenu.jtClientes);
@@ -67,12 +70,12 @@ public class ControladorClient  implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * Clientes.
      *
      * @param tabla
      */
     
-    public void leerEmpleados(JTable tabla) {
+    public void leerCliente(JTable tabla) {
         
         limpiarTabla();
         
@@ -98,7 +101,7 @@ public class ControladorClient  implements ActionListener {
     
     /**
      * Este metodo se encarga de cargar los registros dentro de la tabla de
-     * Empleados.
+     * Clientes.
      *
      * @param tabla
      */
@@ -140,7 +143,7 @@ public class ControladorClient  implements ActionListener {
 
     
      /**
-     * Este metodo se encarga de registrar un nuevo contacto.
+     * Este metodo se encarga de hacer un nuevo registro.
      */
     
     public void nuevo() {
@@ -184,7 +187,7 @@ public class ControladorClient  implements ActionListener {
     
     
      /**
-     * Este metodo se encarga de actualizar el contacto seleccionado dentro de
+     * Este metodo se encarga de actualizar el registro seleccionado dentro de
      * la tabla.
      */
     
@@ -261,7 +264,7 @@ public class ControladorClient  implements ActionListener {
     
      /**
      * Este metodo pone en modo edicion el formulario y carga los datos del
-     * contacto a ser modificado.
+     * cliente a ser modificado.
      */
     
         public void editar() {
@@ -423,7 +426,7 @@ public class ControladorClient  implements ActionListener {
                 this.vistaMenu.btnCliente_Eliminar.setEnabled(true);
                 limpiarCampos(vistaMenu);
                 limpiarTabla();
-                leerEmpleados(vistaMenu.jtClientes);
+                leerCliente(vistaMenu.jtClientes);
             } else {
                 this.vistaMenu.btnCliente_Cancelar.setEnabled(true);
                 JOptionPane.showMessageDialog(vistaMenu, "El campo de busqueda esta vacio.");

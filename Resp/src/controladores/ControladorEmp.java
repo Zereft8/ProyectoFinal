@@ -18,11 +18,10 @@ import modelos.EmpleadosDTO;
 
 public class ControladorEmp implements ActionListener {
     
+    
      /**
-      * En esta parte se instancian el DAO y DTO 
-      * tambien se instancia la vista Menu para poder conectar la
-      * vista con el modelo.
-      */
+      * Instanciando el Dao y el Dto para poder comunicarse con la base de datos y actualizar la vista
+     */
     
     EmpleadosDAO empdao = new EmpleadosDAO();
     EmpleadosDTO empdto = new EmpleadosDTO();
@@ -194,7 +193,7 @@ public class ControladorEmp implements ActionListener {
     
     
      /**
-     * Este metodo se encarga de actualizar el contacto seleccionado dentro de
+     * Este metodo se encarga de actualizar el empleado seleccionado dentro de
      * la tabla.
      */
     

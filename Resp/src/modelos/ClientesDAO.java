@@ -17,6 +17,7 @@ public class ClientesDAO {
     PreparedStatement ps;
     ResultSet rs;
 
+    
     /*Con este solo se listara un registro de la base de datos*/
     
     public List listarRegistro(String valorBuscar) {
@@ -112,6 +113,8 @@ public class ClientesDAO {
     }
 
     // Este metodo se encargara de actualizar nuevos datos
+    
+    
     public int actualizar(ClientesDTO cli) {
 
         int r = 0;
@@ -150,6 +153,8 @@ public class ClientesDAO {
     }
 
     //Este metodo se encargara de eliminar datos
+    
+    
     public int eliminar(int id) {
 
         int r = 0;

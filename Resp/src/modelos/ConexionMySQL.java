@@ -15,6 +15,8 @@ public class ConexionMySQL {
     
     Connection con;
     
+    //Este metodo inicia la conexión.
+    
    public Connection conectar(){
        
         try{
@@ -27,10 +29,6 @@ public class ConexionMySQL {
             System.out.println("Error en la conexion :" + ex);
         }
         return con;
-    }
-
-    public void close() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }   
 
