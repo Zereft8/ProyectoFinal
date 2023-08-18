@@ -91,7 +91,6 @@ CONSTRAINT `FK_Productos_en_Pedidos` FOREIGN KEY `Index_ID_Pedidos_Productos` (`
 INSERT INTO `Empleados` (`Nombre`, `Apellidos`, `Cedula`, `Sueldo`, `Télefono`, `Cargo`, `ID_Empleados_Supervisor`)
 VALUES ('John', 'Doe', '1234567890', 5000, '555-555-5555', 'Gerente', NULL);
 
-INSERT INTO `Empleados` (`Nombre`, `Apellidos`, `Cedula`, `Sueldo`, `Télefono`, `Cargo`, `ID_Empleados_Supervisor`)
-VALUES ('Elian', 'De Los Santos', '2234567890', 2000, '555-555-5555', 'Asistente', 1);
-
+INSERT INTO `Usuarios` (`Contraseña`, `Nombre_Usuario`, `Tipo_Usuario`, `Fecha_Registro`, `ID_Empleados`)
+VALUES ('clave123', 'usuario1', 'Admin', '2023-08-18', 1);
     
