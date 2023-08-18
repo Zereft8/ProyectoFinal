@@ -6,6 +6,7 @@
 
 <p>
   <br>
+  
   - Este proyecto permite gestionar la informacion administrativa de una empresa en este caso una reposteria, tambien permite manejar la información de los productos
   y los pedidos realizados a esta. Dentro de este se pueden Crear, Actualizar, Leer y Eliminar, las informaciones de cada uno de los mantenimientos que este possee.
     <br>
@@ -15,7 +16,8 @@
 ### Por qué el proyecto es útil:
 <p>
     <br>
- - Este permite mejorar la velocidad con la que se accede a los datos de la empresa, y tambien mejora la velocidad con la que se interactua con estos, y no podemos
+  
+  -  Este permite mejorar la velocidad con la que se accede a los datos de la empresa, y tambien mejora la velocidad con la que se interactua con estos, y no podemos
   olivdar el hecho de que. Como la información esta contenida en una base de datos, la perdida de estos no deberia ser una preocupación para la empresa.
       <br>
     <br>
